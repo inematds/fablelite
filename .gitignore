@@ -1,0 +1,8 @@
+# artefatos gerados ao rodar o pipeline
+corpus_*/
+*.clean.md
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+node_modules/
