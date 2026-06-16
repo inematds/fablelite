@@ -385,12 +385,18 @@ def collect_model_metrics(
     model: str,
     projects_dir: str | None = None,
     files: list[str] | None = None,
+    cap_lines: int | None = None,
 ) -> Metrics:
     """Varre todos os projetos e acumula métricas SÓ dos turnos do `model`.
 
     Truque: uma mesma sessão pode misturar modelos. Para o cálculo de ordem
     (read-before-edit etc.) processamos a sessão inteira, mas só somamos os
     turnos do assistente cujo `message.model` bate com o alvo.
+
+    `cap_lines`: se dado, PARA de acumular assim que o modelo atinge ~esse número
+    de PASSOS (linhas-evento do assistente). Serve para comparar dois modelos em
+    amostras do MESMO tamanho — sem isso, o modelo com histórico gigante domina e
+    o delta vira artefato de amostra (ver `compare_models.py --cap-turns`).
     """
     m = Metrics(model=model)
     paths = files if files is not None else list(iter_project_files(projects_dir))
@@ -410,6 +416,8 @@ def collect_model_metrics(
             or (ev.get("message") or {}).get("model") == model
         ]
         m.add_session(filtered)
+        if cap_lines and m.assistant_lines >= cap_lines:
+            break
     return m
 
 

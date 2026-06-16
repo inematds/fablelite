@@ -64,6 +64,9 @@ Notas de uso:
   para apontar para outra pasta de logs (default: `~/.claude/projects`).
 - `make_playbook.py` pode rodar direto do histórico (sem `--from-json`), medindo na hora;
   passar `--from-json compare.json` reaproveita uma medição já feita (mais rápido).
+- **Amostras desiguais enganam.** Se um modelo tem MUITO mais histórico que o outro, use
+  `compare_models.py --cap-turns N` para comparar ~N passos de cada — senão o delta vira
+  artefato de amostra (o lado diluído cai). O script avisa quando os tamanhos divergem muito.
 - O playbook NÃO copia o modelo de referência cegamente: ele **inverte** os hábitos
   fracos (verbosidade, over-thinking no trivial) em vez de replicá-los.
 
@@ -82,27 +85,43 @@ Leitura honesta do delta: o sinal **robusto e transferível** costuma ser o
 prática a importar**, não delta estatisticamente firme — principalmente se a amostra de um
 dos modelos for pequena (o `make_playbook.py` já avisa quando < 30 sessões).
 
-## Achado real de referência
+## Achado real de referência (e a lição de amostra)
 
-Rodado num histórico real: `claude-fable-5` pensou antes de agir em **99%** dos turnos
-vs **54%** do `claude-opus-4-8` (+45 pontos) — esse foi o delta forte. As contagens de
-ferramentas/turno ficaram próximas e os demais sinais entraram como boa prática. Seus
-números vão variar; o pipeline mede os **seus** dados, não estes.
+Cuidado com o tamanho da amostra — é a parte mais fácil de errar. Numa primeira medição,
+com uma amostra LOCAL pequena (7 sessões), o `claude-fable-5` aparecia pensando antes em
+**99%** dos turnos vs **54%** do `claude-opus-4-8` (+45 pontos). Esse número era
+**inflado**. Medindo em AMOSTRA GRANDE (≈4.900 passos do dataset aberto), o honesto é
+**~85% vs 54% (+31 pontos)** — gap real, mas menor.
+
+E a amostra pequena enganou nas DUAS direções: além de inflar o "pensar antes", ela
+ESCONDEU o sinal mais forte — **teste-depois-de-edit: ~41% (Fable) vs ~2% (Opus)** — que
+na amostra de 7 sessões dava 0%. As contagens de ferramentas/turno também NÃO confirmam
+"Fable econômico": em amostra grande ele faz MAIS (~10/turno).
+
+Lição: nunca conclua de amostra pequena; equilibre os tamanhos antes de comparar
+(`compare_models.py --cap-turns N`) e confirme em amostra grande. Seus números vão variar;
+o pipeline mede os **seus** dados.
 
 ## Sem dados próprios? Use o dataset aberto
 
 Se você mal usou o modelo de referência e não tem sessões dele para minerar, há traces
-públicos no Hugging Face. Roda o MESMO exercício comportamental sobre dados de terceiros.
+públicos no Hugging Face. O `Glint-Research/Fable-5-traces` é um **dump cru de
+`~/.claude/projects/`** — arquivos `.jsonl` no formato nativo do Claude Code (com os
+blocos `thinking`/`tool_use` preservados), NÃO um chat achatado. Então roda o MESMO
+exercício comportamental sobre dados de terceiros.
+
+O importador baixa os `.jsonl` direto pela API do HF — **só stdlib, sem a lib
+`datasets`** — e mede com o `fable_lib`:
 
 ```bash
-pip install datasets
-python3 scripts/import_hf_traces.py                       # Glint-Research/Fable-5-traces
-python3 scripts/import_hf_traces.py --peek                # inspeciona o schema do dataset
-python3 scripts/import_hf_traces.py --out corpus_fable_hf # escreve stats.json
+python3 scripts/import_hf_traces.py --peek                # inspeciona (lista + modelos do 1º)
+python3 scripts/import_hf_traces.py --out corpus_fable_hf # baixa tudo + escreve stats.json
+python3 scripts/import_hf_traces.py --limit-files 30      # baixa no máx. N sessões
 ```
 
-O importador é defensivo (tenta mapear formatos de chat / JSONL embutido / transcrição
-crua). Depois, `make_playbook.py --from-json` vira playbook (lado `a` = estes dados).
+Foi assim que medimos o Fable em amostra grande (≈4.900 passos). Depois, monte um
+`compare.json` com `{"a": <stats daqui>, "b": <stats do seu modelo>}` e rode
+`make_playbook.py --from-json` (lado `a` = estes dados).
 
 ## Como injetar o playbook na sessão
 

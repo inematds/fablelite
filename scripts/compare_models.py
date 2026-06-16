@@ -81,10 +81,15 @@ def main() -> int:
     ap.add_argument("--b", default="claude-opus-4-8", help="modelo B (default: claude-opus-4-8)")
     ap.add_argument("--out", help="escreve o comparativo em JSON neste caminho")
     ap.add_argument("--projects", help="pasta de projects (default: ~/.claude/projects)")
+    ap.add_argument("--cap-turns", type=int, default=None, metavar="N",
+                    help="limita CADA modelo a ~N passos (linhas-evento do assistente) para "
+                         "comparar amostras do MESMO tamanho — evita o delta virar artefato "
+                         "de amostra. Ex.: --cap-turns 950")
     args = ap.parse_args()
 
-    a = collect_model_metrics(args.a, args.projects)
-    b = collect_model_metrics(args.b, args.projects)
+    cap = args.cap_turns
+    a = collect_model_metrics(args.a, args.projects, cap_lines=cap)
+    b = collect_model_metrics(args.b, args.projects, cap_lines=cap)
 
     if a.assistant_turns == 0 and b.assistant_turns == 0:
         print("✗ Nenhum dos dois modelos tem turnos no histórico. Rode "
@@ -95,6 +100,21 @@ def main() -> int:
             print(f"⚠ aviso: nenhum turno de '{m.model}' encontrado — "
                   f"a coluna dele vem zerada. (Sem dados de Fable? Use o dataset aberto; "
                   f"veja import_hf_traces.py.)")
+
+    # Honestidade de amostra: 'tudo vs tudo' quando um lado é muito maior gera DELTA
+    # ARTEFATO (o lado diluído cai). Avisa e sugere --cap-turns.
+    if cap is None and a.assistant_lines and b.assistant_lines:
+        big = max(a.assistant_lines, b.assistant_lines)
+        small = min(a.assistant_lines, b.assistant_lines)
+        if big >= 3 * small:
+            print(f"⚠ amostras MUITO desiguais ({args.a}: {a.assistant_lines} passos · "
+                  f"{args.b}: {b.assistant_lines} passos). O modelo com mais histórico domina "
+                  f"e o delta pode ser artefato de amostra. Compare em pé de igualdade com "
+                  f"`--cap-turns {small}` — ou confirme em amostra grande dos DOIS lados.",
+                  file=sys.stderr)
+    elif cap is not None:
+        print(f"ℹ amostra balanceada a ~{cap} passos/modelo "
+              f"({args.a}: {a.assistant_lines} · {args.b}: {b.assistant_lines}).")
 
     print_side_by_side(a, b)
 

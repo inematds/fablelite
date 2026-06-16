@@ -75,6 +75,11 @@
       { "n": "3", "title": "Do Delta ao Playbook", "modules": [
         { "id": "3-1", "title": "Escrevendo o Playbook", "topics": 6, "href": "curso/trilha3/modulo-3-1.html" },
         { "id": "3-2", "title": "Injetando no Modelo (e Sem Dados Próprios)", "topics": 6, "href": "curso/trilha3/modulo-3-2.html" }
+      ]},
+      { "n": "4", "title": "A Prova Real", "modules": [
+        { "id": "4-1", "title": "A Armadilha da Amostra", "topics": 6, "href": "curso/trilha4/modulo-4-1.html" },
+        { "id": "4-2", "title": "As Soluções Aplicáveis", "topics": 6, "href": "curso/trilha4/modulo-4-2.html" },
+        { "id": "4-3", "title": "Exemplos de Utilidade", "topics": 6, "href": "curso/trilha4/modulo-4-3.html" }
       ]}
     ]
   }
@@ -188,6 +193,9 @@
           </a>
           <a href="curso/trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
             <span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+          </a>
+          <a href="curso/trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
+            <span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
           </a>
           <button type="button" data-inema-journey-open class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm">
             <span aria-hidden="true">◷</span><span>Minha jornada</span>
@@ -324,6 +332,7 @@
         <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6">
           <div class="text-4xl font-bold text-emerald-400 mb-1">99%</div>
           <p class="text-sm text-neutral-300">Fable-5 <strong>pensou antes de agir</strong> em 99% dos turnos lógicos.</p>
+          <p class="text-xs text-amber-400 mt-3">⚠ Atualização: medido depois em amostra grande (4.892 passos), o número honesto é <strong>~85%</strong> (não 99%) e o gap cai pra <strong>+31 pts</strong> — e aparece um gap escondido em teste-após-editar (41% vs 2%). Veja a <a href="curso/trilha4/index.html" class="underline hover:text-amber-300">Trilha 4 · A Prova Real</a>.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
           <div class="text-4xl font-bold text-neutral-300 mb-1">54%</div>
@@ -360,8 +369,8 @@
 
     <!-- AS TRÊS TRILHAS -->
     <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6">As três trilhas</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h2 class="text-2xl font-bold mb-6">As quatro trilhas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <a href="curso/trilha1/index.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-6 transition-all">
           <span class="inline-block px-2.5 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-3">TRILHA 1</span>
           <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🪙 Os Logs São Ouro</h3>
@@ -377,6 +386,11 @@
           <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">📓 Do Delta ao Playbook</h3>
           <p class="text-sm text-neutral-400">Escrever o playbook e injetá-lo no modelo — inclusive sem dados próprios.</p>
         </a>
+        <a href="curso/trilha4/index.html" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-6 transition-all">
+          <span class="inline-block px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-3">TRILHA 4</span>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🛡️ A Prova Real</h3>
+          <p class="text-sm text-neutral-400">Os 3 testes de medição, a armadilha da amostra e as soluções — com exemplos de uso.</p>
+        </a>
       </div>
     </section>
 
@@ -386,7 +400,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-6 transition-all">
           <h3 class="font-semibold text-emerald-400 mb-2">📥 O Playbook (.md)</h3>
-          <p class="text-sm text-neutral-400 mb-4">O arquivo-síntese gerado dos <strong class="text-neutral-200">números reais</strong> (Fable&nbsp;5 99% vs Opus&nbsp;4.8 54% de pensar-antes). Aponte-o para o seu modelo via hook, skill ou <code class="font-mono text-emerald-400">CLAUDE.md</code>.</p>
+          <p class="text-sm text-neutral-400 mb-4">O arquivo-síntese gerado dos <strong class="text-neutral-200">números reais</strong> (amostra grande: Fable&nbsp;5 85% vs Opus&nbsp;4.8 54% de pensar-antes, e teste-após-editar 41% vs 2%). Aponte-o para o seu modelo via hook, skill ou <code class="font-mono text-emerald-400">CLAUDE.md</code>.</p>
           <div class="flex flex-wrap gap-3">
             <a href="playbook/fable-mindset-playbook.md" download class="inline-flex items-center px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-semibold transition-colors">📥 Baixar o playbook</a>
             <a href="https://github.com/inematds/fablelite/blob/main/playbook/fable-mindset-playbook.md" target="_blank" rel="noopener" class="inline-flex items-center px-5 py-2.5 bg-dark-700 hover:bg-dark-600 text-sky-400 rounded-lg font-semibold transition-colors">Ver no GitHub →</a>

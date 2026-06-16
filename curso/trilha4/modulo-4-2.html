@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="inema-course" content="fable-lite">
+  <title>Módulo 4.2 · As Soluções Aplicáveis | Fable Lite</title>
+
+  <!-- ANTI-FOUC -->
+  <script>
+  (function () {
+    try {
+      var html = document.documentElement;
+      var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'amber' };
+      function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
+      var p = clone(DEF);
+      try {
+        var raw = localStorage.getItem('inema.prefs');
+        if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
+        else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+      } catch (e) { p = clone(DEF); }
+      var THEMES = { 'inema-dark':{dark:true,attr:null,cs:'dark'},'claro':{dark:false,attr:null,cs:'light'},'sepia':{dark:false,attr:'sepia',cs:'light'},'foco':{dark:null,attr:'foco',cs:null},'contraste':{dark:true,attr:'contraste',cs:'dark'} };
+      var t = THEMES[p.theme] || THEMES['inema-dark'];
+      if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
+      if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
+      html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
+      html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'amber');
+      var s = html.style; var scale = (+p.fontScale || 100);
+      s.setProperty('--inema-font-scale', (scale/100).toString()); s.setProperty('font-size', scale + '%');
+      s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
+      var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
+      s.setProperty('--font-body', fam);
+      var ACC = { emerald:[152,76,45], blue:[217,91,60], purple:[258,90,66], amber:[38,92,50], teal:[174,72,41], rose:[350,89,60] };
+      var a = ACC[p.accent] || ACC.emerald;
+      s.setProperty('--accent-h', a[0]+''); s.setProperty('--accent-s', a[1]+'%'); s.setProperty('--accent-l', a[2]+'%'); s.setProperty('--accent', 'hsl('+a[0]+' '+a[1]+'% '+a[2]+'%)');
+    } catch (err) { try { document.documentElement.classList.add('dark'); document.documentElement.style.colorScheme = 'dark'; } catch (e) {} }
+  })();
+  </script>
+
+  <!-- MANIFESTO -->
+  <script type="application/json" data-inema-manifest>
+  {
+    "course": "fable-lite",
+    "tracks": [
+      { "n": "1", "title": "Os Logs São Ouro", "modules": [
+        { "id": "1-1", "title": "Onde Vivem as Conversas e a Anatomia de uma Sessão", "topics": 6, "href": "curso/trilha1/modulo-1-1.html" },
+        { "id": "1-2", "title": "Gordura vs Ouro — e o Mito do Raciocínio Minerável", "topics": 6, "href": "curso/trilha1/modulo-1-2.html" }
+      ]},
+      { "n": "2", "title": "A Mão na Massa", "modules": [
+        { "id": "2-1", "title": "Debloat: Destilando a Transcrição", "topics": 6, "href": "curso/trilha2/modulo-2-1.html" },
+        { "id": "2-2", "title": "Corpus, Números e o Delta Fable vs Opus", "topics": 6, "href": "curso/trilha2/modulo-2-2.html" }
+      ]},
+      { "n": "3", "title": "Do Delta ao Playbook", "modules": [
+        { "id": "3-1", "title": "Escrevendo o Playbook", "topics": 6, "href": "curso/trilha3/modulo-3-1.html" },
+        { "id": "3-2", "title": "Injetando no Modelo (e Sem Dados Próprios)", "topics": 6, "href": "curso/trilha3/modulo-3-2.html" }
+      ]},
+      { "n": "4", "title": "A Prova Real", "modules": [
+        { "id": "4-1", "title": "A Armadilha da Amostra", "topics": 6, "href": "curso/trilha4/modulo-4-1.html" },
+        { "id": "4-2", "title": "As Soluções Aplicáveis", "topics": 6, "href": "curso/trilha4/modulo-4-2.html" },
+        { "id": "4-3", "title": "Exemplos de Utilidade", "topics": 6, "href": "curso/trilha4/modulo-4-3.html" }
+      ]}
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/learn.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+    @keyframes wf-pulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
+    @media (prefers-reduced-motion: no-preference) {
+      .wf-a { animation: wf-pulse 2.6s ease-in-out infinite; }
+      .wf-a:nth-child(2){animation-delay:.25s} .wf-a:nth-child(3){animation-delay:.5s} .wf-a:nth-child(4){animation-delay:.75s}
+    }
+
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Acento da trilha (amber) + emerald/blue/purple p/ nav */
+    html:not(.dark) .text-amber-400 { color: #b45309; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(180,83,9,0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(180,83,9,0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(180,83,9,0.25); }
+    html:not(.dark) .hover\:bg-amber-500\/30:hover { background-color: rgba(180,83,9,0.18); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #b45309; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(180,83,9,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.22); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .text-red-400 { color: #b91c1c; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    [id] { scroll-margin-top: 5rem; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-amber-600 focus:text-white focus:rounded-lg">Pular para o conteúdo</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <div class="flex items-center space-x-4">
+          <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">✨</span><span class="font-bold text-lg hidden sm:inline">Fable Lite</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="../trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span><span class="hidden sm:inline">Os Logs São Ouro</span>
+          </a>
+          <a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span><span class="hidden sm:inline">A Mão na Massa</span>
+          </a>
+          <a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+          </a>
+          <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10">
+            <span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
+          </a>
+          <button type="button" data-inema-journey-open class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm">
+            <span aria-hidden="true">◷</span><span>Minha jornada</span>
+            <span class="inema-journey-badge hidden" data-inema-journey-badge data-count="0" aria-hidden="true"></span>
+          </button>
+          <button type="button" data-inema-appearance-toggle="[data-inema-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência"><span aria-hidden="true">◑</span></button>
+          <div data-inema-appearance class="inema-appearance-pop"></div>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4" aria-label="Trilha de navegação">
+    <div class="flex items-center space-x-2 text-sm text-neutral-400">
+      <a href="../../index.html" class="hover:text-amber-400">Início</a><span>/</span>
+      <a href="index.html" class="hover:text-amber-400">Trilha 4</a><span>/</span>
+      <span class="text-amber-400">Módulo 4.2</span>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="modulo-4-2" data-inema-module="4-2" data-inema-track="4" class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MÓDULO 4.2</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">🛠️ As Soluções Aplicáveis</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">
+        Vista a armadilha da amostra, o que sobra de verdade? Aqui estão as duas alavancas com lastro, o playbook corrigido, e como
+        <strong class="text-amber-400">medir honesto</strong>, <strong class="text-amber-400">injetar a regra</strong> e <strong class="text-amber-400">reproduzir</strong> o experimento — incluindo baixar a referência crua do Hugging Face e fixar um baseline datado.
+      </p>
+      <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~28</div><div class="text-xs text-neutral-400">Minutos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Aplicado</div><div class="text-xs text-neutral-400">Nível</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
+
+      <!-- TOC -->
+      <nav data-inema-toc aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start">
+        <div data-inema-meter="modulo:4-2" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo 4.2">
+          <div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo 4.2</span><span class="text-amber-400 font-bold text-sm" data-inema-meter-pct>0%</span></div>
+          <div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill></div></div>
+          <span class="text-xs text-neutral-500" data-inema-meter-frac>0 de 0</span>
+        </div>
+        <p class="text-sm text-neutral-400 mb-2">Seção <span data-inema-section-counter>1 de 6</span></p>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#topico-1" class="inema-toc-link text-neutral-400 hover:text-amber-400">1. As duas alavancas</a></li>
+          <li><a href="#topico-2" class="inema-toc-link text-neutral-400 hover:text-amber-400">2. Injetar a regra</a></li>
+          <li><a href="#topico-3" class="inema-toc-link text-neutral-400 hover:text-amber-400">3. Medir honesto</a></li>
+          <li><a href="#topico-4" class="inema-toc-link text-neutral-400 hover:text-amber-400">4. Referência via HF</a></li>
+          <li><a href="#topico-5" class="inema-toc-link text-neutral-400 hover:text-amber-400">5. Reproduzir tudo</a></li>
+          <li><a href="#topico-6" class="inema-toc-link text-neutral-400 hover:text-amber-400">6. O que NÃO transfere</a></li>
+        </ul>
+      </nav>
+
+      <main id="conteudo">
+
+      <!-- SVG do módulo: o pipeline honesto medir → injetar → reproduzir/baseline -->
+      <div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
+        <svg viewBox="0 0 1000 220" class="w-full h-auto" role="img" aria-label="O pipeline honesto: medir com amostra balanceada, injetar a regra focada no SessionStart, e reproduzir contra um baseline datado — novos logs realimentam a medição">
+          <defs>
+            <linearGradient id="m42-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+            <filter id="m42-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <pattern id="m42-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#f59e0b" opacity="0.12"/></pattern>
+            <marker id="m42-ah" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#fbbf24"/></marker>
+            <marker id="m42-ahc" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"/></marker>
+          </defs>
+          <rect x="0" y="0" width="1000" height="220" fill="url(#m42-grid)"/>
+          <g font-family="Inter,sans-serif" font-size="12.5" font-weight="600">
+            <g class="wf-a"><rect x="40" y="78" width="190" height="64" rx="13" fill="#2a1c05" stroke="#fbbf24" stroke-width="2"/><text x="135" y="104" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="14">① medir honesto</text><text x="135" y="124" text-anchor="middle" fill="#fef3c7" font-size="11">amostra balanceada</text></g>
+            <g class="wf-a"><rect x="405" y="78" width="190" height="64" rx="13" fill="#2a1c05" stroke="#fbbf24" stroke-width="2"/><text x="500" y="104" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="14">② injetar a regra</text><text x="500" y="124" text-anchor="middle" fill="#fef3c7" font-size="11">hook SessionStart</text></g>
+          </g>
+          <g filter="url(#m42-glow)"><rect x="770" y="74" width="200" height="72" rx="14" fill="#2a1c05" stroke="url(#m42-grad)" stroke-width="2.5"/></g>
+          <text x="870" y="102" text-anchor="middle" fill="#fbbf24" font-family="Inter,sans-serif" font-weight="700" font-size="14">③ reproduzir</text>
+          <text x="870" y="124" text-anchor="middle" fill="#fef3c7" font-family="Inter,sans-serif" font-size="11">baseline datado</text>
+          <g fill="none" stroke="#fbbf24" stroke-width="1.8" opacity="0.55">
+            <path d="M230,110 L405,110" marker-end="url(#m42-ah)"/>
+            <path d="M595,110 L770,110" marker-end="url(#m42-ah)"/>
+          </g>
+          <!-- realimentação (ciano, volta) -->
+          <path d="M870,146 C870,194 135,194 135,142" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.5" stroke-dasharray="7 6" marker-end="url(#m42-ahc)"/>
+          <text x="502" y="212" text-anchor="middle" fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11.5">novos logs realimentam — re-meça contra o baseline</text>
+        </svg>
+      </div>
+
+      <!-- TÓPICO 1 -->
+      <section id="topico-1" data-inema-topic="modulo-4-2#topico-1" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
+            <h2 class="text-2xl font-bold">🎯 As duas alavancas com lastro</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t1-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          De tudo que o delta apontou, só <strong class="text-amber-400">duas alavancas</strong> sobrevivem à amostra grande e transferem de verdade:
+          <strong class="text-amber-400">pensar antes de agir</strong> (Fable <strong class="text-amber-400">85%</strong> vs Opus <strong>54%</strong>) e
+          <strong class="text-amber-400">fechar o loop com teste após editar</strong> (Fable <strong class="text-amber-400">41%</strong> vs Opus <strong>2%</strong>). O resto é ruído ou empate.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+            <h4 class="font-bold text-amber-400 mb-4">✓ Vale a pena copiar</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Pensar antes de agir no não-trivial — <strong>85 vs 54</strong>, gap sólido em 4.9k passos.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Teste após editar — <strong>41 vs 2</strong>, a maior alavanca escondida.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Loop fechado: editou → rodou → confirmou.</span></li>
+            </ul>
+          </div>
+          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+            <h4 class="font-bold text-red-400 mb-4">✗ NÃO é vantagem</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Economizar ferramentas": Fable usa <strong>10,45</strong>/turno vs Opus 7,96 — faz MAIS.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>read-antes-de-edit: ~37–40% nos dois — empata.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>O "+45pp" do Teste 1 — era amostra de 7 sessões.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+          <p class="text-neutral-300 text-sm">Resista à tentação de empacotar dez regras. Duas alavancas com lastro batem dez palpites. O playbook corrigido cabe em um parágrafo: <em>pense antes do não-trivial; depois de editar, rode o teste.</em></p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TÓPICO 2 -->
+      <section id="topico-2" data-inema-topic="modulo-4-2#topico-2" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
+            <h2 class="text-2xl font-bold">🪝 Injetar a regra focada</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t2-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          A regra corrigida entra via hook <code class="font-mono text-amber-400">SessionStart</code> que lê um <code class="font-mono text-amber-400">.md</code> separado — assim você edita a regra
+          <strong class="text-amber-400">sem mexer no settings</strong>. O script é <strong class="text-amber-400">fail-open</strong> (se o arquivo sumir, a sessão segue) e o hook <strong class="text-amber-400">MESCLA</strong> no array de
+          <code class="font-mono text-amber-400">SessionStart</code> existente — não sobrescreve os hooks que você já tem.
+        </p>
+
+        <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-xs overflow-x-auto">
+          <pre class="text-neutral-300"><span class="text-neutral-500">// ~/.claude/settings.json — MESCLE no array existente, não sobrescreva</span>
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          { "type": "command",
+            <span class="text-neutral-500">// lê regra-focada.md e devolve via additionalContext; fail-open</span>
+            "command": "bash ~/projetos/fablelite/hooks/inject-regra.sh" }
+        ]
+      }
+    ]
+  }
+}</pre>
+        </div>
+
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> Três propriedades que importam</h3>
+          <ul class="space-y-2 text-neutral-300 text-sm">
+            <li><strong>.md separado</strong> — edite a regra sem tocar no JSON do settings.</li>
+            <li><strong>fail-open</strong> — sem o arquivo, imprime <code class="font-mono text-blue-400">{"continue":true}</code> e sai 0.</li>
+            <li><strong>mescla</strong> — adiciona ao array de <code class="font-mono text-blue-400">SessionStart</code>; preserva seus outros hooks.</li>
+          </ul>
+        </div>
+
+        <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+          <p class="text-neutral-300 text-sm">Mantenha a regra curta: as DUAS alavancas. Um <code class="font-mono text-amber-400">additionalContext</code> enxuto é lido; um manifesto longo é ignorado. Aponte para outro arquivo via <code class="font-mono text-amber-400">FABLE_REGRA=</code> quando quiser testar variações.</p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TÓPICO 3 -->
+      <section id="topico-3" data-inema-topic="modulo-4-2#topico-3" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
+            <h2 class="text-2xl font-bold">⚖️ Medir honesto: balancear a amostra</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t3-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          A correção que evita o <strong class="text-amber-400">+45pp falso</strong>: <strong class="text-amber-400">cape a amostra pelo nº de passos</strong> (ex.: ~950 de cada lado) antes de comparar, e
+          <strong class="text-amber-400">avise</strong> quando os tamanhos divergem muito. Sem isso, 4.892 passos do Fable contra 42k do Opus produzem qualquer narrativa que você quiser.
+        </p>
+
+        <!-- TABELA: a amostra de cada teste -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
+          <table class="w-full text-sm">
+            <thead class="bg-dark-700/60">
+              <tr class="text-left">
+                <th class="px-4 py-3 font-semibold text-amber-400">Teste</th>
+                <th class="px-4 py-3 font-semibold text-amber-400">Amostra</th>
+                <th class="px-4 py-3 font-semibold text-amber-400">Pensar (Fable vs Opus)</th>
+                <th class="px-4 py-3 font-semibold text-amber-400">Veredito</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-dark-600">
+              <tr>
+                <td class="px-4 py-3 font-medium">1 — local</td>
+                <td class="px-4 py-3 text-neutral-300">7 sessões / ~950</td>
+                <td class="px-4 py-3 text-neutral-300">99% vs 54% (+45pp)</td>
+                <td class="px-4 py-3 text-red-400">enganoso</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">2 — capada</td>
+                <td class="px-4 py-3 text-neutral-300">~950 cada (4 sessões)</td>
+                <td class="px-4 py-3 text-neutral-300">Opus salta p/ 94%</td>
+                <td class="px-4 py-3 text-yellow-400">instável</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">3 — HF</td>
+                <td class="px-4 py-3 text-neutral-300">4.892 passos / 30 sessões</td>
+                <td class="px-4 py-3 text-neutral-300">85% vs 54% (+31pp)</td>
+                <td class="px-4 py-3 text-amber-400">sólido</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+          <p class="text-neutral-300 text-sm">Capar ajuda, mas <strong>amostra pequena igual ainda é ruído</strong> (Teste 2 com 4 sessões foi instável). A meta é capar E ter passos suficientes dos dois lados — foi o Teste 3 (4.9k) que deu o número defensável de <strong>85 vs 54</strong>.</p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TÓPICO 4 -->
+      <section id="topico-4" data-inema-topic="modulo-4-2#topico-4" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
+            <h2 class="text-2xl font-bold">🤗 Referência confiável via HF (sem a lib datasets)</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t4-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          A âncora da amostra grande é o dump CRU de <code class="font-mono text-amber-400">Glint-Research/Fable-5-traces</code>. São <strong class="text-amber-400">arquivos <code class="font-mono text-amber-400">.jsonl</code> do Claude Code</strong> (eventos, não
+          chat achatado). Baixe-os direto pela <strong class="text-amber-400">API do HF</strong> — <strong>sem instalar a lib <code class="font-mono text-amber-400">datasets</code></strong> — e rode no <code class="font-mono text-amber-400">fable_lib</code>, o mesmo medidor.
+        </p>
+
+        <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-xs overflow-x-auto">
+          <pre class="text-neutral-300"><span class="text-neutral-500"># 1. lista os .jsonl crus do repo via API do HF (nada de `pip install datasets`)</span>
+REPO=<span class="text-amber-400">Glint-Research/Fable-5-traces</span>
+curl -s <span class="text-amber-400">"https://huggingface.co/api/datasets/$REPO/tree/main?recursive=1"</span> \
+  | python3 -c <span class="text-amber-400">'import sys,json; [print(f["path"]) for f in json.load(sys.stdin) if f["path"].endswith(".jsonl")]'</span> \
+  &gt; files.txt
+
+<span class="text-neutral-500"># 2. baixa cada arquivo cru (resolve/main = o blob, não a página)</span>
+mkdir -p corpus_fable_hf
+while read f; do
+  curl -sL <span class="text-amber-400">"https://huggingface.co/datasets/$REPO/resolve/main/$f"</span> \
+    -o <span class="text-amber-400">"corpus_fable_hf/$(basename "$f")"</span>
+done &lt; files.txt
+
+<span class="text-neutral-500"># 3. roda o MESMO medidor no fable_lib sobre os .jsonl crus</span>
+python3 -m fable_lib.measure --glob <span class="text-amber-400">"corpus_fable_hf/*.jsonl"</span> --cap-steps <span class="text-amber-400">950</span></pre>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+          <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Fonte</div><p class="text-xs text-neutral-400">Fable-5-traces (HF)</p></div>
+          <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Formato</div><p class="text-xs text-neutral-400">.jsonl de eventos</p></div>
+          <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Sem</div><p class="text-xs text-neutral-400">lib datasets</p></div>
+          <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Roda em</div><p class="text-xs text-neutral-400">fable_lib</p></div>
+        </div>
+
+        <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+          <p class="text-neutral-300 text-sm">Use <code class="font-mono text-amber-400">resolve/main/&lt;path&gt;</code> para pegar o blob cru (a URL <code class="font-mono text-amber-400">blob/</code> traz HTML da página). Como já são <code class="font-mono text-amber-400">.jsonl</code> do Claude Code, o <code class="font-mono text-amber-400">fable_lib</code> lê direto — não precisa achatar chat nem mapear schema.</p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TÓPICO 5 -->
+      <section id="topico-5" data-inema-topic="modulo-4-2#topico-5" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
+            <h2 class="text-2xl font-bold">🔁 Reproduzir tudo (e fixar o baseline)</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t5-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          A prova real é reproduzível: rode os mesmos comandos e salve um <strong class="text-amber-400">baseline DATADO</strong> num lugar <strong class="text-amber-400">durável</strong> (não <code class="font-mono text-amber-400">/tmp</code>, que some).
+          Sem o baseline guardado, você não consegue dizer depois se o playbook moveu o número.
+        </p>
+
+        <!-- TIMELINE: os passos de reprodução -->
+        <div class="space-y-4 mb-6">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">1</span></div>
+            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+              <h4 class="font-semibold text-amber-400 mb-1"><code class="font-mono">extract_corpus.py</code></h4>
+              <p class="text-neutral-300 text-sm">Lê os <code class="font-mono text-amber-400">.jsonl</code> e produz o corpus de eventos por modelo.</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">2</span></div>
+            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+              <h4 class="font-semibold text-amber-400 mb-1">o medidor do HF</h4>
+              <p class="text-neutral-300 text-sm">Roda o mesmo exercício sobre os 4.892 passos do <code class="font-mono text-amber-400">Fable-5-traces</code> (lado de referência).</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">3</span></div>
+            <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
+              <h4 class="font-semibold text-amber-400 mb-1"><code class="font-mono">compare_models.py</code></h4>
+              <p class="text-neutral-300 text-sm">Compara Fable vs Opus já capado, e grava o baseline datado durável.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+            <h4 class="font-bold text-amber-400 mb-4">✓ Baseline bem guardado</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Datado: <code class="font-mono text-amber-400">baseline-2026-06-15.json</code>.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Durável: no repo/pasta do projeto, versionado.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Com a amostra registrada (passos/sessões por lado).</span></li>
+            </ul>
+          </div>
+          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+            <h4 class="font-bold text-red-400 mb-4">✗ Baseline que evapora</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Em <code class="font-mono text-red-400">/tmp</code> — some no próximo boot.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Sem data — não dá pra comparar "antes/depois".</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Sem o tamanho da amostra anotado.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> Por que datar e guardar</h3>
+          <p class="text-neutral-300 text-sm">O baseline datado transforma "acho que melhorou" em número. Mede ANTES, aplica o playbook, mede DEPOIS — com amostra suficiente — e o delta fala por si. Sem o ANTES salvo, não há prova.</p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TÓPICO 6 -->
+      <section id="topico-6" data-inema-topic="modulo-4-2#topico-6" class="mb-16">
+        <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
+          <div class="flex items-center space-x-4">
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
+            <h2 class="text-2xl font-bold">🧭 O que NÃO transfere</h2>
+          </div>
+          <button type="button" data-inema-doubt-toggle aria-pressed="false" title="Marcar dúvida neste tópico" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+        </div>
+        <p data-inema-block="m4-2-t6-p1" class="text-neutral-300 mb-6 leading-relaxed inema-prose">
+          Honestidade acima de hype, para fechar: o que medimos é <strong class="text-amber-400">presença</strong>, não conteúdo (o texto do <code class="font-mono text-amber-400">thinking</code> vem cifrado nos logs).
+          Os <strong class="text-amber-400">pesos do modelo não atravessam</strong> — você imita o ritmo, não clona o Fable. E o playbook não é eterno: <strong class="text-amber-400">itere</strong> com novos dados.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
+            <h4 class="font-bold text-amber-400 mb-4">✓ O que você ganha</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>O RITMO bom medido (pensar + testar).</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Uma régua para medir qualquer modelo com logs.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Um baseline para provar mudança com número.</span></li>
+            </ul>
+          </div>
+          <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+            <h4 class="font-bold text-red-400 mb-4">✗ O que NÃO transfere</h4>
+            <ul class="space-y-3 text-neutral-300 text-sm">
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Conteúdo do raciocínio — presença ≠ conteúdo (cifrado).</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Os pesos do modelo — o poder não muda de mãos.</span></li>
+              <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Virar Fable" — a identidade não vem junto.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Presença ≠ conteúdo</h3>
+          <p class="text-neutral-300 text-sm">Medimos SE o modelo pensou, não O QUE pensou — o <code class="font-mono text-red-400">thinking</code> vem cifrado. Foi a amostra pequena que enganou nas duas direções: inflou o "pensar" (99→85) E escondeu o "teste após editar" (0→41%). A régua grande corrige; ela não lê mentes.</p>
+        </div>
+
+        <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
+          <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
+          <p class="text-neutral-300 text-sm">Trate o playbook como vivo: conforme acumula sessões, re-meça contra o baseline datado e atualize as alavancas. Honestidade acima de hype — só promova um número quando a amostra grande o sustentar.</p>
+        </div>
+
+        <div class="flex justify-start mt-6">
+          <button type="button" data-inema-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors">
+            <span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label">Marcar como lido</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- RESUMO -->
+      <section class="mb-12">
+        <div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
+          <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🛠️</span> Resumo do Módulo</h2>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Duas alavancas com lastro</strong><span class="text-neutral-400"> — pensar (85 vs 54) + teste após editar (41 vs 2). Só essas transferem.</span></div></div>
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Injetar a regra focada</strong><span class="text-neutral-400"> — hook <code class="font-mono text-amber-400">SessionStart</code> lê um <code class="font-mono text-amber-400">.md</code>, fail-open, MESCLA no array.</span></div></div>
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Medir honesto</strong><span class="text-neutral-400"> — cape a amostra (~950) e avise quando os tamanhos divergem; foi o que matou o +45pp falso.</span></div></div>
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Referência via HF sem datasets</strong><span class="text-neutral-400"> — baixe os <code class="font-mono text-amber-400">.jsonl</code> crus do <code class="font-mono text-amber-400">Fable-5-traces</code> pela API e rode no <code class="font-mono text-amber-400">fable_lib</code>.</span></div></div>
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Reproduzir tudo</strong><span class="text-neutral-400"> — <code class="font-mono text-amber-400">extract_corpus.py</code> + <code class="font-mono text-amber-400">compare_models.py</code> + baseline DATADO e durável.</span></div></div>
+            <div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">O que NÃO transfere</strong><span class="text-neutral-400"> — presença ≠ conteúdo; pesos não atravessam; itere com novos dados.</span></div></div>
+          </div>
+          <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
+            <h3 class="font-semibold text-amber-400 mb-2">A régua, em uma frase:</h3>
+            <p class="text-neutral-300">Meça balanceado, injete o pouco que tem lastro, e prove com baseline. Honestidade acima de hype.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="modulo-4-1.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo 4.1</a>
+            <a href="modulo-4-3.html" class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors">Módulo 4.3 →</a>
+          </div>
+        </div>
+      </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer class="border-t border-dark-600 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>Fable Lite · <a href="https://inema.club" target="_blank" rel="noopener" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> · 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      if (!topicItem) return;
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800') || document;
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => { if (exp !== explanation) exp.classList.remove('active'); });
+      const willOpen = !explanation.classList.contains('active');
+      explanation.classList.toggle('active');
+      button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    }
+    function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
+    function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    (function () {
+      const themeToggle = document.getElementById('theme-toggle');
+      const darkIcon = document.getElementById('theme-toggle-dark-icon');
+      const lightIcon = document.getElementById('theme-toggle-light-icon');
+      const html = document.documentElement;
+      function sync() { const isDark = html.classList.contains('dark'); darkIcon.classList.toggle('hidden', !isDark); lightIcon.classList.toggle('hidden', isDark); }
+      sync();
+      themeToggle.addEventListener('click', () => {
+        const goDark = !html.classList.contains('dark');
+        if (window.INEMA && INEMA.setPref) INEMA.setPref('theme', goDark ? 'inema-dark' : 'claro');
+        else { html.classList.toggle('dark'); localStorage.setItem('theme', goDark ? 'dark' : 'light'); }
+        sync();
+      });
+      document.addEventListener('inema:progress', sync);
+    })();
+  </script>
+  <script src="../../assets/learn.js"></script>
+  <script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
+</body>
+</html>

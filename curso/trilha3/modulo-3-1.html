@@ -53,6 +53,11 @@
       { "n": "3", "title": "Do Delta ao Playbook", "modules": [
         { "id": "3-1", "title": "Escrevendo o Playbook", "topics": 6, "href": "curso/trilha3/modulo-3-1.html" },
         { "id": "3-2", "title": "Injetando no Modelo (e Sem Dados Próprios)", "topics": 6, "href": "curso/trilha3/modulo-3-2.html" }
+      ]},
+      { "n": "4", "title": "A Prova Real", "modules": [
+        { "id": "4-1", "title": "A Armadilha da Amostra", "topics": 6, "href": "curso/trilha4/modulo-4-1.html" },
+        { "id": "4-2", "title": "As Soluções Aplicáveis", "topics": 6, "href": "curso/trilha4/modulo-4-2.html" },
+        { "id": "4-3", "title": "Exemplos de Utilidade", "topics": 6, "href": "curso/trilha4/modulo-4-3.html" }
       ]}
     ]
   }
@@ -145,6 +150,9 @@
           </a>
           <a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10">
             <span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+          </a>
+          <a href="../trilha4/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
+            <span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
           </a>
           <button type="button" data-inema-journey-open class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm">
             <span aria-hidden="true">◷</span><span>Minha jornada</span>
@@ -366,6 +374,7 @@ python make_playbook.py --target claude-opus-4-8 \
             <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-purple-500/30">
               <h4 class="font-semibold text-purple-400 mb-1">Pense antes de agir <span class="text-xs bg-purple-500/20 text-purple-400 rounded-full px-2 py-0.5 ml-1">delta firme · +45 pts</span></h4>
               <p class="text-neutral-300 text-sm">Fable raciocinou em 99% dos turnos vs 54% do Opus. A maior alavanca, a que mais transfere — topo da lista.</p>
+              <p class="text-xs text-amber-400 mt-3">⚠ Atualização: medido depois em amostra grande (4.892 passos), o número honesto é <strong>~85%</strong> (não 99%) e o gap cai pra <strong>+31 pts</strong> — e aparece um gap escondido em teste-após-editar (41% vs 2%). Veja a <a href="../trilha4/index.html" class="underline hover:text-amber-300">Trilha 4 · A Prova Real</a>.</p>
             </div>
           </div>
           <div class="flex items-start space-x-4">
