@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="fable-lite" name="inema-course"/>
-<title>Módulo 3.1 · Escrevendo o Playbook | Fable Lite</title>
+<title>Module 3.1 · Writing the Playbook | Fable Lite</title>
 <!-- ANTI-FOUC -->
 <script>
   (function () {
@@ -66,7 +66,7 @@
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/learn.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
 <style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
@@ -125,8 +125,8 @@
     [id] { scroll-margin-top: 5rem; }
   </style>
 <link href="https://inematds.github.io/fablelite/curso/trilha3/modulo-3-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/fablelite/en/curso/trilha3/modulo-3-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/fablelite/es/curso/trilha3/modulo-3-1.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-3-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha3/modulo-3-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha3/modulo-3-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/modulo-3-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-3-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha3/modulo-3-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded-lg" href="#conteudo">Skip to content</a>
 <!-- NAV -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,24 +140,24 @@
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
-<span class="sm:hidden">T1</span><span class="hidden sm:inline">Os Logs São Ouro</span>
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Logs Are Gold</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">A Mão na Massa</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Hands-On</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">From Delta to Playbook</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
-<span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
+<span class="sm:hidden">T4</span><span class="hidden sm:inline">The Real Proof</span>
 </a>
 <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Minha jornada</span>
+<span aria-hidden="true">◷</span><span>My journey</span>
 <span aria-hidden="true" class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
 </button>
-<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Aparência" type="button"><span aria-hidden="true">◑</span></button>
+<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Appearance" type="button"><span aria-hidden="true">◑</span></button>
 <div class="inema-appearance-pop" data-inema-appearance=""></div>
-<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Tema claro/escuro">
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Light/dark theme">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
 </button>
@@ -166,54 +166,54 @@
 </div>
 </nav>
 <!-- BREADCRUMB -->
-<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Navigation track" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
-<a class="hover:text-purple-400" href="../../index.html">Início</a><span>/</span>
-<a class="hover:text-purple-400" href="index.html">Trilha 3</a><span>/</span>
-<span class="text-purple-400">Módulo 3.1</span>
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.1</span>
 </div>
 </nav>
 <!-- HEADER -->
 <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-inema-module="3-1" data-inema-track="3" id="modulo-3-1">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.1</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">📝 Escrevendo o Playbook</h1>
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📝 Writing the Playbook</h1>
 <p class="text-lg text-neutral-400 max-w-3xl">
-        O delta foi medido na Trilha 2. Aqui ele vira um único <code class="font-mono text-purple-400">.md</code> de <strong class="text-purple-400">regras</strong>:
-        o que é um playbook, o gerador que injeta os números reais, a ordem por força do sinal, por que se corrige em vez de copiar,
-        as regras que transferem e o checklist de uma linha para colar no topo de qualquer tarefa de código.
+        The delta was measured in Track 2. Here it becomes a single <code class="font-mono text-purple-400">.md</code> of <strong class="text-purple-400">rules</strong>:
+        what a playbook is, the generator that injects the real numbers, the order by signal strength, why you adapt instead of copy,
+        the rules that transfer, and the one-line checklist to paste at the top of any coding task.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Aplicado</div><div class="text-xs text-neutral-400">Nível</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Applied</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
 <!-- TOC -->
-<nav aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
-<div aria-label="Progresso do módulo 3.1" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:3-1" role="progressbar">
-<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo 3.1</span><span class="text-purple-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
+<nav aria-label="Page index" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
+<div aria-label="Module 3.1 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:3-1" role="progressbar">
+<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Module 3.1</span><span class="text-purple-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
 <div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 de 0</span>
+<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 of 0</span>
 </div>
-<p class="text-sm text-neutral-400 mb-2">Seção <span data-inema-section-counter="">1 de 6</span></p>
+<p class="text-sm text-neutral-400 mb-2">Section <span data-inema-section-counter="">1 of 6</span></p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-1">1. O que é um playbook</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-1">1. What a playbook is</a></li>
 <li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-2">2. make_playbook.py</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-3">3. Ordenar por força</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-4">4. Corrigir, não copiar</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-5">5. Regras transferíveis</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-6">6. Checklist de uma linha</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-3">3. Sort by strength</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-4">4. Fix it, don't copy it</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-5">5. Transferable rules</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-6">6. One-line checklist</a></li>
 </ul>
 </nav>
 <main id="conteudo">
 <!-- SVG do módulo: número medido -> regra acionável -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
-<svg aria-label="Um número medido (99% vs 54%) atravessa o gerador make_playbook e sai como uma regra imperativa: pense antes de agir" class="w-full h-auto" role="img" viewbox="0 0 1000 210">
+<svg aria-label="A measured number (99% vs. 54%) passes through the make_playbook generator and comes out as an imperative rule: think before acting" class="w-full h-auto" role="img" viewbox="0 0 1000 210">
 <defs>
 <lineargradient id="m31-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
 <filter height="180%" id="m31-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -224,17 +224,17 @@
 <rect fill="url(#m31-grid)" height="210" width="1000" x="0" y="0"></rect>
 <!-- número medido -->
 <rect fill="#1a1230" height="58" rx="12" stroke="#c084fc" stroke-width="2" width="210" x="30" y="78"></rect>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="135" y="103">99% vs 54%</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="135" y="122">o número medido</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="135" y="103">99% vs. 54%</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="135" y="122">the measured number</text>
 <path d="M240,107 L355,107" fill="none" marker-end="url(#m31-ah)" opacity="0.55" stroke="#c084fc" stroke-width="1.8"></path>
 <!-- gerador (ciano) -->
-<g class="wf-a"><rect fill="#0e1b26" height="58" rx="12" stroke="#38bdf8" stroke-width="2" width="220" x="355" y="78"></rect><text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="465" y="103">make_playbook.py</text><text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="465" y="122">injeta o número no texto</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="58" rx="12" stroke="#38bdf8" stroke-width="2" width="220" x="355" y="78"></rect><text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="465" y="103">make_playbook.py</text><text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="465" y="122">injects the number into the text</text></g>
 <path d="M575,107 L690,107" fill="none" marker-end="url(#m31-ahc)" opacity="0.5" stroke="#38bdf8" stroke-width="1.8"></path>
 <!-- regra (caixa-foco) -->
 <g filter="url(#m31-glow)"><rect fill="#1a1230" height="78" rx="14" stroke="url(#m31-grad)" stroke-width="2.5" width="280" x="690" y="68"></rect></g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="830" y="98">Regra</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="830" y="120">"Pense antes de agir.</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="830" y="137">+45 pts — a maior alavanca."</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="830" y="98">Rule</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="830" y="120">“Think before acting.</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="830" y="137">+45 pts — the biggest lever."</text>
 </svg>
 </div>
 <!-- TÓPICO 1 -->
@@ -242,45 +242,45 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">📜 O que é um playbook</h2>
+<h2 class="text-2xl font-bold">📜 What a playbook is</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t1-p1">
-          Um playbook é um único arquivo <code class="font-mono text-purple-400">.md</code> <strong class="text-purple-400">acionável</strong>. Ele captura o delta que você
-          mediu não como uma narrativa ("o Fable parecia mais cuidadoso") nem como impressão de vídeo, mas como <strong>REGRAS</strong>: instruções
-          imperativas que o modelo-alvo pode seguir — <em>"pense antes de agir"</em>, <em>"leia antes de editar"</em>. Regra é injetável; impressão não.
+          A playbook is a single file <code class="font-mono text-purple-400">.md</code> <strong class="text-purple-400">actionable</strong>. It captures the delta you
+          measured not as a narrative ("Fable seemed more careful") or a video impression, but as <strong>RULES</strong>: imperative instructions
+          that the target model can follow — <em>“think before acting”</em>, <em>“read before editing”</em>. A rule can be injected; an impression can’t.
         </p>
 <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🎯</span> O que faz um playbook honesto</h3>
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🎯</span> What an honest playbook does</h3>
 <ul class="space-y-2 text-neutral-300">
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>1 arquivo</strong>: cabe no contexto sem inchar a sessão.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Imperativo</strong>: cada linha é uma ordem, não uma descrição.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Números reais embutidos</strong>: o +45 pts vem do SEU corpus.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Honesto</strong>: diz o que NÃO transfere e o que NÃO copiar.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>1 file</strong>: fits in context without bloating the session.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Imperative</strong>: each line is an instruction, not a description.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Actual numbers embedded</strong>: the +45 points come from YOUR corpus.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">•</span><span><strong>Honest</strong>: says what does NOT transfer and what NOT to copy.</span></li>
 </ul>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-<h4 class="font-bold text-purple-400 mb-4">✓ É um playbook</h4>
+<h4 class="font-bold text-purple-400 mb-4">✓ It’s a playbook</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Em tarefa não-trivial, planeje em 2–5 linhas antes da 1ª ferramenta."</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>"Nunca edite um arquivo que você não leu neste contexto."</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Cada regra checável e seguível.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>“For a non-trivial task, plan in 2–5 lines before the 1st tool.”</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>“Never edit a file you haven’t read in this context.”</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Every rule checkable and followable.</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ NÃO é um playbook</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ Is NOT a playbook</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"O Fable é um modelo muito reflexivo." (impressão)</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Um ensaio sobre como o modelo "pensa".</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Copiar o Fable cegamente, defeitos inclusos.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>“Fable is a very reflective model.” (impression)</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>An essay on how the model "thinks".</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Blindly copy Fable, flaws included.</span></li>
 </ul>
 </div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -289,14 +289,14 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">⚙️ make_playbook.py — gera do compare.json</h2>
+<h2 class="text-2xl font-bold">⚙️ make_playbook.py — generates from compare.json</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t2-p1">
-          O gerador é o <code class="font-mono text-purple-400">make_playbook.py</code>. Ele tem dois modos: ou você passa o <code class="font-mono text-purple-400">compare.json</code>
-          já medido na Trilha 2 (via <code class="font-mono text-purple-400">--from-json</code>, mais rápido), ou ele mede o histórico na hora. Em ambos, o ponto-chave é o
-          mesmo: <strong class="text-purple-400">os NÚMEROS reais entram no texto das regras</strong> — não impressões genéricas.
+          The generator is the <code class="font-mono text-purple-400">make_playbook.py</code>. It has two modes: either you provide the <code class="font-mono text-purple-400">compare.json</code>
+          already measured in Track 2 (via <code class="font-mono text-purple-400">--from-json</code>, faster), or it measures the history on the fly. Either way, the key point is
+          the same: <strong class="text-purple-400">the real NUMBERS go in the rule text</strong> — not generic impressions.
         </p>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-sm overflow-x-auto">
 <pre class="text-neutral-300"><span class="text-neutral-500"># reusa o compare já medido (rápido):</span>
@@ -312,24 +312,24 @@ python make_playbook.py --target claude-opus-4-8 \
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">›</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-purple-400 mb-1"><code class="font-mono">--from-json compare.json</code></h4>
-<p class="text-neutral-300 text-sm">Reaproveita a medição já feita pelo <code class="font-mono text-purple-400">compare_models.py</code>. Mesmo número, sem re-varrer milhares de sessões.</p>
+<p class="text-neutral-300 text-sm">Reuse the measurement already taken by <code class="font-mono text-purple-400">compare_models.py</code>. Same number, without rescanning thousands of sessions.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">›</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-purple-400 mb-1">Números injetados no texto</h4>
-<p class="text-neutral-300 text-sm">O <code class="font-mono text-purple-400">build_playbook()</code> escreve "<strong>99%</strong> contra <strong>54%</strong> (+45 pontos)" lendo os valores do dict de métricas — não constantes chumbadas no código.</p>
+<h4 class="font-semibold text-purple-400 mb-1">Numbers injected into the text</h4>
+<p class="text-neutral-300 text-sm">O <code class="font-mono text-purple-400">build_playbook()</code> writes "<strong>99%</strong> against <strong>54%</strong> (+45 points)” by reading the values from the metrics dict — not hard-coded constants.</p>
 </div>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">Gere o <code class="font-mono text-purple-400">compare.json</code> uma vez (Trilha 2) e versione-o junto do playbook. Assim qualquer pessoa pode regenerar o <code class="font-mono text-purple-400">.md</code> com <code class="font-mono text-purple-400">--from-json</code> em segundos, sem acesso ao seu histórico bruto.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">Generate the <code class="font-mono text-purple-400">compare.json</code> once (Path 2), and version it along with the playbook. That way anyone can regenerate the <code class="font-mono text-purple-400">.md</code> with <code class="font-mono text-purple-400">--from-json</code> in seconds, without access to your raw history.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -338,54 +338,54 @@ python make_playbook.py --target claude-opus-4-8 \
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">📶 Ordenar por FORÇA do sinal</h2>
+<h2 class="text-2xl font-bold">📶 Sort by signal STRENGTH</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t3-p1">
-          A ordem das regras não segue a ordem do vídeo nem a do código — segue a <strong class="text-purple-400">força do sinal medido</strong>. O delta robusto é o
-          <strong>pensar-antes-de-agir</strong> (<strong class="text-purple-400">+45 pts</strong>): vem em primeiro. O read-before-edit e o teste-depois entram depois,
-          como boa prática a importar, com a ressalva honesta de amostra pequena — não como delta estatisticamente firme.
+          The order of the rules doesn’t follow the order of the video or the code—it follows <strong class="text-purple-400">measured signal strength</strong>. The robust delta is the
+          <strong>think-before-acting</strong> (<strong class="text-purple-400">+45 pts</strong>): comes first. Read-before-edit and test-after come later,
+          as good practices to adopt, with the honest caveat of a small sample — not as a statistically robust delta.
         </p>
 <!-- TIMELINE: ordem por força -->
 <div class="space-y-3 mb-6">
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">1</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-purple-500/30">
-<h4 class="font-semibold text-purple-400 mb-1">Pense antes de agir <span class="text-xs bg-purple-500/20 text-purple-400 rounded-full px-2 py-0.5 ml-1">delta firme · +45 pts</span></h4>
-<p class="text-neutral-300 text-sm">Fable raciocinou em 99% dos turnos vs 54% do Opus. A maior alavanca, a que mais transfere — topo da lista.</p>
-<p class="text-xs text-amber-400 mt-3">⚠ Atualização: medido depois em amostra grande (4.892 passos), o número honesto é <strong>~85%</strong> (não 99%) e o gap cai pra <strong>+31 pts</strong> — e aparece um gap escondido em teste-após-editar (41% vs 2%). Veja a <a class="underline hover:text-amber-300" href="../trilha4/index.html">Trilha 4 · A Prova Real</a>.</p>
+<h4 class="font-semibold text-purple-400 mb-1">Think before you act <span class="text-xs bg-purple-500/20 text-purple-400 rounded-full px-2 py-0.5 ml-1">firm delta · +45 pts</span></h4>
+<p class="text-neutral-300 text-sm">Fable reasoned in 99% of turns vs. Opus’s 54%. The biggest lever, the one with the most transferable impact — at the top of the list.</p>
+<p class="text-xs text-amber-400 mt-3">⚠ Update: measured later on a large sample (4.892 steps), the honest number is <strong>~85%</strong> (not 99%) and the gap drops to <strong>+31 pts</strong> — and a hidden gap shows up in test-after-edit (41% vs 2%). See the <a class="underline hover:text-amber-300" href="../trilha4/index.html">Track 4 · The Real-World Test</a>.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center"><span class="text-neutral-300 font-bold">2</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Ferramenta com propósito <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">densidade</span></h4>
-<p class="text-neutral-300 text-sm">6,57 vs 7,86 ferr./turno: o Fable foi mais econômico. Densidade, não thrashing.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Purposeful tool use <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">density</span></h4>
+<p class="text-neutral-300 text-sm">6.57 vs 7.86 tools/turn: Fable was more economical. Density, not thrashing.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center"><span class="text-neutral-300 font-bold">3</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Ler antes de editar <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">boa prática</span></h4>
-<p class="text-neutral-300 text-sm">~34% / ~38% nos dois: modesto em ambos. Disciplina a SUBIR para 100%, não a copiar.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Read before editing <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">best practice</span></h4>
+<p class="text-neutral-300 text-sm">~34% / ~38% in both: modest in both. Discipline is RISING to 100%, not copying.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center"><span class="text-neutral-300 font-bold">4</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Fechar o loop: teste/build <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">boa prática</span></h4>
-<p class="text-neutral-300 text-sm">Amostra ruidosa (0% / 3%). Entra como hábito a adotar, com a ressalva.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Close the loop: test/build <span class="text-xs bg-dark-700 text-neutral-400 rounded-full px-2 py-0.5 ml-1">best practice</span></h4>
+<p class="text-neutral-300 text-sm">Noisy sample (0% / 3%). Include it as a habit to adopt, with the caveat.</p>
 </div>
 </div>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Amostra pequena de Fable (7 sessões)</h3>
-<p class="text-neutral-300 text-sm">Trate read-antes-de-edit e teste-depois-de-edit como BOA PRÁTICA a importar, não como delta firme. O <code class="font-mono text-emerald-400">make_playbook.py</code> até avisa quando há menos de 30 sessões. O sinal robusto aqui é só o raciocínio-antes-de-agir.</p>
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Small Fable sample (7 sessions)</h3>
+<p class="text-neutral-300 text-sm">Treat read-before-edit and test-after-edit as BEST PRACTICES to adopt, not as a firm delta. The <code class="font-mono text-emerald-400">make_playbook.py</code> even warns when there are fewer than 30 sessions. The only robust signal here is reasoning-before-acting.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -394,39 +394,39 @@ python make_playbook.py --target claude-opus-4-8 \
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">🔄 Corrigir, não copiar</h2>
+<h2 class="text-2xl font-bold">🔄 Fix, don’t copy</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t4-p1">
-          Aqui está a parte que distingue um playbook honesto de uma cópia ingênua: ele <strong class="text-purple-400">inverte os hábitos fracos do Fable</strong> em vez de
-          replicá-los. Raciocinar em 99% dos turnos é ótimo no difícil — e desperdício num rename de uma linha. Um playbook que copia tudo importaria também os defeitos.
+          Here’s what distinguishes an honest playbook from a naive copy: it <strong class="text-purple-400">reverses Fable’s weak habits</strong> instead of
+          replicating them. Reasoning through 99% of turns is great for difficult tasks — and wasteful for a one-line rename. A playbook that copies everything would also import the flaws.
         </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ Hábito fraco do Fable</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ Fable’s weak habit</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Over-thinking no trivial</strong> — raciocínio até num rename.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Verbosidade</strong> — narra demais o que vai fazer.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Plano que vira ensaio</strong> — planejar longo demais.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Overthinking the trivial</strong> — reasoning even for a rename.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>Verbosity</strong> — narrates too much of what it’s going to do.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><strong>A plan that turns into rehearsal</strong> — planning for too long.</span></li>
 </ul>
 </div>
 <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-<h4 class="font-bold text-purple-400 mb-4">✓ Correção no playbook</h4>
+<h4 class="font-bold text-purple-400 mb-4">✓ Correction in the playbook</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Raciocínio <strong>proporcional à dificuldade</strong> — mecânico vai direto.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span><strong>Aja</strong>; o resumo vem curto DEPOIS, com caminhos e o que foi verificado.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>O plano cabe em <strong>poucas linhas</strong>; a profundidade vai para a execução.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Reasoning <strong>proportional to difficulty</strong> — mechanical work goes straight through.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span><strong>Act</strong>; the summary comes afterward, kept brief, with paths and what was verified.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>The plan fits in <strong>a few lines</strong>; depth belongs in execution.</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> Por que isso importa</h3>
-<p class="text-neutral-300 text-sm">O objetivo não é virar o Fable — é melhorar a execução do modelo-alvo. Importar um defeito junto com a virtude anula o ganho. Corrigir mantém só o que ajuda: o ritmo bom, sem o atrito.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> Why this matters</h3>
+<p class="text-neutral-300 text-sm">The goal isn’t to become Fable—it’s to improve the target model’s execution. Importing a flaw along with a strength cancels out the gain. Correcting it keeps only what helps: the good pace, without the friction.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -435,16 +435,16 @@ python make_playbook.py --target claude-opus-4-8 \
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">🧭 As regras transferíveis</h2>
+<h2 class="text-2xl font-bold">🧭 Transferable rules</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t5-p1">
-          Estas são as regras que o modelo-alvo de fato adota — o coração do playbook. Todas convergem para uma <strong class="text-purple-400">sequência canônica</strong> de trabalho.
+          These are the rules the target model actually adopts—the heart of the playbook. They all converge on one <strong class="text-purple-400">canonical sequence</strong> of work.
         </p>
 <!-- SVG: a sequência canônica -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="A sequência canônica: entender, planejar em texto, ler os alvos, editar cirúrgico, testar ou buildar, relatar com o output real" class="w-full h-auto" role="img" viewbox="0 0 1000 130">
+<svg aria-label="The canonical sequence: understand, plan in text, read the targets, make surgical edits, run tests or a build, and report the actual output" class="w-full h-auto" role="img" viewbox="0 0 1000 130">
 <defs>
 <lineargradient id="m31b-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
 <filter height="180%" id="m31b-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -453,14 +453,14 @@ python make_playbook.py --target claude-opus-4-8 \
 </defs>
 <rect fill="url(#m31b-grid)" height="130" width="1000" x="0" y="0"></rect>
 <g font-family="Inter,sans-serif" font-size="12.5" font-weight="600">
-<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="18" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="78" y="72">entender</text>
-<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="178" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="238" y="72">planejar</text>
-<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="338" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="398" y="72">ler alvos</text>
-<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="498" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="558" y="72">editar</text>
-<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="658" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="718" y="72">testar</text>
+<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="18" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="78" y="72">understand</text>
+<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="178" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="238" y="72">plan</text>
+<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="338" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="398" y="72">read targets</text>
+<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="498" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="558" y="72">edit</text>
+<rect fill="#1a1230" height="38" rx="10" stroke="#c084fc" stroke-width="2" width="120" x="658" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="718" y="72">test</text>
 </g>
 <g filter="url(#m31b-glow)"><rect fill="#1a1230" height="46" rx="12" stroke="url(#m31b-grad)" stroke-width="2.5" width="160" x="818" y="44"></rect></g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="898" y="72">relatar</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="898" y="72">report</text>
 <g fill="none" opacity="0.55" stroke="#c084fc" stroke-width="1.8">
 <path d="M138,67 L178,67" marker-end="url(#m31b-ah)"></path>
 <path d="M298,67 L338,67" marker-end="url(#m31b-ah)"></path>
@@ -471,19 +471,19 @@ python make_playbook.py --target claude-opus-4-8 \
 </svg>
 </div>
 <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🧩</span> As seis regras que transferem</h3>
+<h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🧩</span> The six rules that transfer</h3>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">1.</span><span><strong>Pense antes</strong> no não-trivial (2–5 linhas de plano antes da 1ª ferramenta).</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">2.</span><span><strong>Ferramenta com propósito</strong>: densidade, não agitação; chamadas independentes no mesmo turno.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">3.</span><span><strong>Ler antes de editar → 100%</strong>: nunca editar um arquivo não lido neste contexto.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">4.</span><span><strong>Fechar o loop</strong> com teste/build e relatar o resultado REAL.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">5.</span><span><strong>Sequência canônica</strong>: entender → plano → ler → editar → testar → relatar.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">6.</span><span><strong>Pare</strong> quando tiver o suficiente para agir — não re-derive fatos já estabelecidos.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">1.</span><span><strong>Think first</strong> in the non-trivial task (2–5 lines of plan before the 1st tool).</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">2.</span><span><strong>Purposeful tool use</strong>: density, not busyness; independent calls in the same turn.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">3.</span><span><strong>Read before editing → 100%</strong>: never edit a file you haven't read in this context.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">4.</span><span><strong>Close the loop</strong> with a test/build and report the REAL result.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">5.</span><span><strong>Canonical sequence</strong>: understand → plan → read → edit → test → report.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">6.</span><span><strong>Stop</strong> when you have enough to act — don't re-derive facts that are already established.</span></li>
 </ul>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -492,13 +492,13 @@ python make_playbook.py --target claude-opus-4-8 \
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">✅ O checklist de uma linha</h2>
+<h2 class="text-2xl font-bold">✅ The one-line checklist</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-1-t6-p1">
-          Todo o playbook destila numa única linha que você cola no topo de tarefas de código. É o lembrete mínimo, de custo de contexto desprezível,
-          que carrega a sequência canônica e as correções. Este é o checklist final, exatamente como sai do gerador:
+          The entire playbook boils down to a single line you paste at the top of coding tasks. It’s a minimal reminder, with negligible context cost,
+          that carries the canonical sequence and the corrections. This is the final checklist, exactly as it comes out of the generator:
         </p>
 <div class="bg-dark-900 rounded-xl border border-purple-500/30 p-6 mb-6 font-mono text-sm overflow-x-auto">
 <pre class="text-neutral-300"><span class="text-purple-400">entender → plano curto → ler → editar → testar → relatar (com output)</span>  ·
@@ -506,40 +506,40 @@ pense-antes-no-não-trivial · ferramenta-com-propósito · read-before-edit→1
 teste-depois-de-edit · sem-verbosidade · sem-over-think-no-trivial</pre>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Onde colar</div><p class="text-xs text-neutral-400">topo da tarefa de código</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Custo</div><p class="text-xs text-neutral-400">desprezível (1 linha)</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Carrega</div><p class="text-xs text-neutral-400">sequência + correções</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Próximo</div><p class="text-xs text-neutral-400">injetar automático (3.2)</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Where to paste</div><p class="text-xs text-neutral-400">top of the coding task</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Cost</div><p class="text-xs text-neutral-400">negligible (1 line)</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Loads</div><p class="text-xs text-neutral-400">sequence + corrections</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Next</div><p class="text-xs text-neutral-400">inject automatically (3.2)</p></div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">Esse checklist é o resumo; o playbook completo (com a tabela do delta e a seção "NÃO copie isto") é o que você injeta. No Módulo 3.2 vemos como fazer esse arquivo entrar no contexto sozinho a cada sessão.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">This checklist is the summary; the full playbook (with the delta table and the “DO NOT copy this” section) is what you inject. In Module 3.2, we'll see how to make this file enter the context automatically at every session.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
 <!-- RESUMO -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📜</span> Resumo do Módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📜</span> Module Summary</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Playbook = 1 .md de regras</strong><span class="text-neutral-400"> — acionável, imperativo, não narrativa.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-purple-400">make_playbook.py</code> injeta os números reais</strong><span class="text-neutral-400"> — do <code class="font-mono text-purple-400">compare.json</code> ou medindo na hora.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Ordem por FORÇA do sinal</strong><span class="text-neutral-400"> — pensar-antes (+45 pts) primeiro; o resto como boa prática.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Corrigir, não copiar</strong><span class="text-neutral-400"> — inverte over-thinking, verbosidade e plano-ensaio.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Sequência canônica</strong><span class="text-neutral-400"> — entender → plano → ler → editar → testar → relatar.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Checklist de uma linha</strong><span class="text-neutral-400"> — cole no topo das tarefas de código.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Playbook = 1 .md of rules</strong><span class="text-neutral-400"> — actionable, imperative, not narrative.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-purple-400">make_playbook.py</code> injects the actual numbers</strong><span class="text-neutral-400"> — from the <code class="font-mono text-purple-400">compare.json</code> or by measuring in real time.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Order by SIGNAL STRENGTH</strong><span class="text-neutral-400"> — think first (+45 pts) first; the rest as good practice.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Correct, don’t copy</strong><span class="text-neutral-400"> — reverses overthinking, verbosity, and plan-rehearsal.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Canonical sequence</strong><span class="text-neutral-400"> — understand → plan → read → edit → test → report.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">One-line checklist</strong><span class="text-neutral-400"> — paste at the top of coding tasks.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-purple-400 mb-2">Próximo Módulo:</h3>
-<p class="text-neutral-300">3.2 — Injetando no Modelo (e Sem Dados Próprios)</p>
+<h3 class="font-semibold text-purple-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">3.2 — Injecting into the Model (and Without Your Own Data)</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Voltar para Trilha</a>
-<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-2.html">Próximo Módulo →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Track</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-2.html">Next Module →</a>
 </div>
 </div>
 </section>
@@ -581,7 +581,7 @@ teste-depois-de-edit · sem-verbosidade · sem-over-think-no-trivial</pre>
       document.addEventListener('inema:progress', sync);
     })();
   </script>
-<script src="../../assets/learn.js"></script>
+<script src="../../../assets/learn.js"></script>
 <script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
 </body>
 </html>

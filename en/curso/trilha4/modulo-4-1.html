@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="fable-lite" name="inema-course"/>
-<title>Módulo 4.1 · A Armadilha da Amostra | Fable Lite</title>
+<title>Module 4.1 · The Sample Trap | Fable Lite</title>
 <!-- ANTI-FOUC -->
 <script>
   (function () {
@@ -66,7 +66,7 @@
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/learn.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
 <style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
@@ -126,8 +126,8 @@
     [id] { scroll-margin-top: 5rem; }
   </style>
 <link href="https://inematds.github.io/fablelite/curso/trilha4/modulo-4-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/fablelite/en/curso/trilha4/modulo-4-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/fablelite/es/curso/trilha4/modulo-4-1.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-4-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha4/modulo-4-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha4/modulo-4-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-amber-600 focus:text-white focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha4/modulo-4-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-4-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha4/modulo-4-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-amber-600 focus:text-white focus:rounded-lg" href="#conteudo">Skip to content</a>
 <!-- NAV -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,24 +141,24 @@
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
-<span class="sm:hidden">T1</span><span class="hidden sm:inline">Os Logs São Ouro</span>
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Logs Are Gold</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">A Mão na Massa</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Hands-On</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">From Delta to Playbook</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html">
-<span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
+<span class="sm:hidden">T4</span><span class="hidden sm:inline">The Real Proof</span>
 </a>
 <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Minha jornada</span>
+<span aria-hidden="true">◷</span><span>My journey</span>
 <span aria-hidden="true" class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
 </button>
-<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Aparência" type="button"><span aria-hidden="true">◑</span></button>
+<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Appearance" type="button"><span aria-hidden="true">◑</span></button>
 <div class="inema-appearance-pop" data-inema-appearance=""></div>
-<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Tema claro/escuro">
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Light/dark theme">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
 </button>
@@ -167,54 +167,54 @@
 </div>
 </nav>
 <!-- BREADCRUMB -->
-<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Navigation track" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
-<a class="hover:text-amber-400" href="../../index.html">Início</a><span>/</span>
-<a class="hover:text-amber-400" href="index.html">Trilha 4</a><span>/</span>
-<span class="text-amber-400">Módulo 4.1</span>
+<a class="hover:text-amber-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-amber-400" href="index.html">Track 4</a><span>/</span>
+<span class="text-amber-400">Module 4.1</span>
 </div>
 </nav>
 <!-- HEADER -->
 <header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-inema-module="4-1" data-inema-track="4" id="modulo-4-1">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MÓDULO 4.1</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">🪤 A Armadilha da Amostra</h1>
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MODULE 4.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🪤 The Sample Trap</h1>
 <p class="text-lg text-neutral-400 max-w-3xl">
-        Medimos o mesmo delta <strong class="text-amber-400">três vezes</strong> — e o número mudou cada vez. Aqui você vê como uma amostra pequena
-        engana nas <strong class="text-amber-400">duas direções</strong>: ela <em>inflou</em> uma vantagem que não existia (+45pp) e <em>escondeu</em> outra
-        que era real. A régua honesta só aparece com amostra grande dos dois lados.
+        We measure the same delta <strong class="text-amber-400">three times</strong> — and the number changed every time. Here you can see how a small sample
+        misleads in the <strong class="text-amber-400">two directions</strong>: it <em>inflated</em> an advantage that didn’t exist (+45pp) and <em>hid</em> another
+        that was real. The honest benchmark only appears with a large sample on both sides.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Conceitual</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Advanced</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Conceptual</div><div class="text-xs text-neutral-400">Type</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
 <!-- TOC -->
-<nav aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
-<div aria-label="Progresso do módulo 4.1" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:4-1" role="progressbar">
-<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo 4.1</span><span class="text-amber-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
+<nav aria-label="Page index" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
+<div aria-label="Module 4.1 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:4-1" role="progressbar">
+<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Module 4.1</span><span class="text-amber-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
 <div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 de 0</span>
+<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 of 0</span>
 </div>
-<p class="text-sm text-neutral-400 mb-2">Seção <span data-inema-section-counter="">1 de 6</span></p>
+<p class="text-sm text-neutral-400 mb-2">Section <span data-inema-section-counter="">1 of 6</span></p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-1">1. Os três testes</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-2">2. Teste 1 — sample minúsculo</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-3">3. Teste 2 — amostra igual</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-4">4. Teste 3 — 4.9k do HF</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-5">5. Engano em duas direções</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-6">6. A regra de ouro</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-1">1. The three tests</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-2">2. Test 1 — tiny sample</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-3">3. Test 2 — equal sample</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-4">4. Test 3 — 4.9k from HF</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-5">5. Misleading in two directions</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-amber-400" href="#topico-6">6. The golden rule</a></li>
 </ul>
 </nav>
 <main id="conteudo">
 <!-- SVG do módulo: as três amostras e a conclusão que muda -->
 <div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
-<svg aria-label="Três amostras de tamanhos diferentes — 7 sessões, ~950 passos balanceados e 4.892 passos do Hugging Face — produzem três conclusões: +45pp enganoso, 94% instável e +31pp sólido" class="w-full h-auto" role="img" viewbox="0 0 1000 240">
+<svg aria-label="Three samples of different sizes — 7 sessions, ~950 balanced steps, and 4,892 Hugging Face steps — yield three conclusions: misleading +45pp, unstable 94%, and solid +31pp" class="w-full h-auto" role="img" viewbox="0 0 1000 240">
 <defs>
 <lineargradient id="m41-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbbf24"></stop><stop offset="1" stop-color="#f59e0b"></stop></lineargradient>
 <filter height="180%" id="m41-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -228,22 +228,22 @@
 <g class="wf-a">
 <circle cx="150" cy="92" fill="#2a1c06" r="20" stroke="#fbbf24" stroke-width="2"></circle>
 <text fill="#fde68a" font-size="13" text-anchor="middle" x="150" y="97">7</text>
-<text fill="#fcd34d" font-size="12" text-anchor="middle" x="150" y="138">7 sessões</text>
-<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="150" y="155">~950 passos</text>
+<text fill="#fcd34d" font-size="12" text-anchor="middle" x="150" y="138">7 sessions</text>
+<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="150" y="155">~950 steps</text>
 </g>
 <!-- amostra 2: balanceada -->
 <g class="wf-a">
 <circle cx="480" cy="88" fill="#2a1c06" r="32" stroke="#fbbf24" stroke-width="2"></circle>
 <text fill="#fde68a" font-size="13" text-anchor="middle" x="480" y="93">~950</text>
-<text fill="#fcd34d" font-size="12" text-anchor="middle" x="480" y="142">amostra igual</text>
-<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="480" y="159">4 sessões (Opus)</text>
+<text fill="#fcd34d" font-size="12" text-anchor="middle" x="480" y="142">equal sample</text>
+<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="480" y="159">4 sessions (Opus)</text>
 </g>
 <!-- amostra 3: grande -->
 <g class="wf-a">
 <circle cx="820" cy="84" fill="#2a1c06" filter="url(#m41-glow)" r="46" stroke="url(#m41-grad)" stroke-width="2.5"></circle>
 <text fill="#fde68a" font-size="14" font-weight="700" text-anchor="middle" x="820" y="89">4.9k</text>
-<text fill="#fcd34d" font-size="12" text-anchor="middle" x="820" y="150">4.892 passos (HF)</text>
-<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="820" y="167">30 sessões</text>
+<text fill="#fcd34d" font-size="12" text-anchor="middle" x="820" y="150">4.892 steps (HF)</text>
+<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="820" y="167">30 sessions</text>
 </g>
 </g>
 <!-- setas de "amostra cresce" -->
@@ -254,11 +254,11 @@
 <!-- conclusões -->
 <g font-family="Inter,sans-serif" font-size="12" font-weight="700">
 <text fill="#f87171" text-anchor="middle" x="150" y="200">+45pp</text>
-<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="150" y="218">enganoso</text>
+<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="150" y="218">misleading</text>
 <text fill="#fbbf24" text-anchor="middle" x="480" y="200">94% Opus</text>
-<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="480" y="218">instável</text>
+<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="480" y="218">unstable</text>
 <text fill="#34d399" text-anchor="middle" x="820" y="200">+31pp</text>
-<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="820" y="218">sólido / defensável</text>
+<text fill="#9ca3af" font-size="11" font-weight="400" text-anchor="middle" x="820" y="218">solid / defensible</text>
 </g>
 </svg>
 </div>
@@ -267,45 +267,44 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">🧪 Os três testes, em ordem</h2>
+<h2 class="text-2xl font-bold">🧪 The three tests, in order</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t1-p1">
-          O delta Fable vs Opus não saiu de uma medição só — saiu de uma <strong class="text-amber-400">jornada de três</strong>. Primeiro um punhado de
-          sessões locais. Depois uma tentativa de equilibrar o tamanho. Por fim, um dataset aberto com milhares de passos. Cada rodada deu um número
-          diferente — e é justamente essa diferença que ensina a não confiar no primeiro resultado.
+          The Fable vs. Opus delta didn’t come from a single measurement—it came from a <strong class="text-amber-400">three-part journey</strong>. First, a handful of
+          local sessions. Then an attempt to balance the sample size. Finally, an open dataset with thousands of steps. Each round produced a different number — and that difference is precisely what teaches you not to trust the first result.
         </p>
 <div class="space-y-4 mb-6">
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">1</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-amber-400 mb-1">7 sessões locais</h4>
-<p class="text-neutral-300 text-sm">O primeiro recorte: ~950 passos do Fable local. Empolgante, mas minúsculo — e foi onde a armadilha começou.</p>
+<h4 class="font-semibold text-amber-400 mb-1">7 local sessions</h4>
+<p class="text-neutral-300 text-sm">The first sample: ~950 steps from local Fable. Exciting, but tiny—and that’s where the trap began.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">2</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-amber-400 mb-1">Amostra igual (~950 cada)</h4>
-<p class="text-neutral-300 text-sm">Tentamos equilibrar capando pelo nº de passos. Ajuda — mas se o lado contrário ainda é minúsculo, continua ruído.</p>
+<h4 class="font-semibold text-amber-400 mb-1">Equal sample (~950 each)</h4>
+<p class="text-neutral-300 text-sm">We tried to balance them by capping the number of steps. It helps—but if the other side is still tiny, it’s still noise.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold">3</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-amber-400 mb-1">4.892 passos do HF</h4>
-<p class="text-neutral-300 text-sm">Dataset aberto <code class="font-mono text-amber-400">Fable-5-traces</code>: 30 sessões. Amostra grande dos dois lados = número defensável.</p>
+<h4 class="font-semibold text-amber-400 mb-1">4.892 steps from HF</h4>
+<p class="text-neutral-300 text-sm">Open dataset <code class="font-mono text-amber-400">Fable-5-traces</code>: 30 sessions. Large samples on both sides = a defensible number.</p>
 </div>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que medir três vezes?</h3>
-<p class="text-neutral-300 text-sm">Porque o primeiro número foi <strong>bonito demais</strong>. Quando um resultado parece grande demais para ser verdade, a primeira pergunta não é "uau, quanto?" — é "de quantas sessões saiu isso?". Repetir com mais dados é o que separa o achado da ilusão.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Why measure three times?</h3>
+<p class="text-neutral-300 text-sm">Because the first number was <strong>too polished</strong>. When a result seems too good to be true, the first question isn’t "wow, how much?" — it’s "how many sessions did that come from?". Repeating it with more data is what separates a finding from an illusion.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -314,41 +313,41 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">1️⃣ Teste 1 — o sample minúsculo</h2>
+<h2 class="text-2xl font-bold">1️⃣ Test 1 — the tiny sample</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t2-p1">
-          O primeiro recorte foram <strong class="text-amber-400">7 sessões / 950 passos</strong> do Fable local. O número saiu redondo e empolgante:
-          <strong class="text-amber-400">99% pensa</strong> no Fable contra <strong class="text-amber-400">54%</strong> no Opus — um delta de
-          <strong class="text-amber-400">+45pp</strong>. Parece a prova definitiva. Mas 99% de uma amostra de 7 sessões é exatamente o tipo de número que
-          deveria <strong>acender o alerta</strong>, não fechar a conta.
+          The first sample was <strong class="text-amber-400">7 sessions / 950 steps</strong> from local Fable. The number came out round and exciting:
+          <strong class="text-amber-400">99% think</strong> in Fable versus <strong class="text-amber-400">54%</strong> in Opus — a delta of
+          <strong class="text-amber-400">+45pp</strong>. It looks like definitive proof. But 99% of a sample of 7 sessions is exactly the kind of number that
+          should <strong>raise the alert</strong>, not balancing the books.
         </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
-<h4 class="font-bold text-amber-400 mb-4">✓ O que o sample parecia mostrar</h4>
+<h4 class="font-bold text-amber-400 mb-4">✓ What the sample seemed to show</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Fable pensa antes de agir <strong class="text-amber-400">99%</strong> das vezes.</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Opus pensa <strong class="text-amber-400">54%</strong> — um abismo de +45pp.</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>"Pronto, está provado: Fable é muito melhor."</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Fable thinks before acting <strong class="text-amber-400">99%</strong> of the time.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Opus thinks <strong class="text-amber-400">54%</strong> — a chasm of +45pp.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>“Done, it’s proven: Fable is much better.”</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ O que a amostra de 7 escondia</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ What the sample of 7 concealed</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>7 sessões não representam o comportamento típico.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>99% quase nunca sobrevive a mais dados (caiu pra 85%).</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>O +45pp era um artefato do tamanho, não um fato.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>7 sessions do not represent typical behavior.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>99% almost never survives more data (dropped to 85%).</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The +45pp was a sample-size artifact, not a fact.</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> A pegadinha do 99%</h3>
-<p class="text-neutral-300 text-sm">Um valor tão extremo (99%) num n pequeno é um sinal clássico de <strong>sobre-ajuste à amostra</strong>: poucas sessões, todas parecidas, e a estatística "satura". O número certo não é zero nem 99% — é os 85% que só aparecem quando você joga milhares de passos na conta.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> The 99% pitfall</h3>
+<p class="text-neutral-300 text-sm">Such an extreme value (99%) with a small n is a classic sign of <strong>sample overfitting</strong>: few sessions, all similar, and the statistic "saturates." The right number isn't zero or 99% — it's the 85% that only shows up when you add thousands of steps to the count.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -357,31 +356,31 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">⚖️ Teste 2 — amostra igual</h2>
+<h2 class="text-2xl font-bold">⚖️ Test 2 — equal sample</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t3-p1">
-          Desconfiados do +45pp, tentamos o óbvio: <strong class="text-amber-400">equilibrar os tamanhos</strong>. Capamos os dois lados em ~950 passos cada.
-          Resultado surpreendente — o Opus <strong class="text-amber-400">saltou para 94%</strong>. Só que esse recorte do Opus veio de apenas
-          <strong class="text-amber-400">4 sessões</strong>. Capar o tamanho ajudou a tirar o viés do volume, mas trocou um problema por outro:
-          <strong>4 sessões ainda é ruído</strong>, e o número virou instável.
+          Skeptical of the +45pp, we tried the obvious: <strong class="text-amber-400">balance the sizes</strong>. We capped both sides at ~950 steps each.
+          Surprising result — Opus <strong class="text-amber-400">jumped to 94%</strong>. But this Opus sample came from just
+          <strong class="text-amber-400">4 sessions</strong>. Capping the size helped remove volume bias, but traded one problem for another:
+          <strong>4 sessions is still noise</strong>, and the number became unstable.
         </p>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> O que aprendemos com o teste 2</h3>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> What we learned from test 2</h3>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li><strong>Equilibrar tamanho é necessário</strong> — comparar 950 vs 42k passos sempre vai distorcer.</li>
-<li><strong>Mas não basta</strong> — se o lado balanceado tem 4 sessões, você só trocou um viés por variância.</li>
-<li><strong>94% de 4 sessões ≠ verdade</strong> — é o mesmo erro do teste 1, agora do outro lado.</li>
+<li><strong>Balancing size is necessary</strong> — comparing 950 vs 42k steps will always distort the results.</li>
+<li><strong>But that's not enough</strong> — if the balanced side has 4 sessions, you’ve only swapped one bias for variance.</li>
+<li><strong>94% from 4 sessions ≠ truth</strong> — it's the same error as test 1, now from the other side.</li>
 </ul>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">Balancear amostra resolve <em>uma</em> das duas ameaças (o viés de volume). A outra — <strong>variância de amostra pequena</strong> — só some com <strong>mais sessões</strong>. Equilibre o tamanho <em>e</em> garanta volume suficiente nos dois lados antes de tirar conclusão.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">Balancing the sample solves it <em>a</em> of the two threats (volume bias). The other one — <strong>small-sample variance</strong> — only disappears with <strong>more sessions</strong>. Balance the size <em>e</em> ensure there’s enough volume on both sides before drawing a conclusion.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -390,62 +389,62 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">📊 Teste 3 — 4.892 passos do HF</h2>
+<h2 class="text-2xl font-bold">📊 Test 3 — 4,892 HF steps</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t4-p1">
-          A resposta veio do dataset aberto <code class="font-mono text-amber-400">Glint-Research/Fable-5-traces</code>: <strong class="text-amber-400">4.892 passos
-          em 30 sessões</strong> do Fable, comparados contra a base ampla do Opus. Agora o "pensar antes de agir" estabilizou em
-          <strong class="text-amber-400">Fable 85% vs Opus 54% (+31pp)</strong>. Não é o +45pp eufórico nem o 94% invertido — é o número que
-          <strong>sobrevive ao volume</strong>. Amostra grande dos dois lados é o que torna a comparação defensável.
+          The answer came from the open dataset <code class="font-mono text-amber-400">Glint-Research/Fable-5-traces</code>: <strong class="text-amber-400">4.892 steps
+          across 30 sessions</strong> from Fable, compared against Opus's broader baseline. Now “think before acting” has stabilized at
+          <strong class="text-amber-400">Fable 85% vs Opus 54% (+31pp)</strong>. It’s not the euphoric +45pp or the inverted 94% — it’s the number that
+          <strong>survives at scale</strong>. A large sample on both sides is what makes the comparison defensible.
         </p>
 <!-- TABELA: os 3 testes comparados -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
 <table class="w-full text-sm">
 <thead class="bg-dark-700/60">
 <tr class="text-left">
-<th class="px-4 py-3 font-semibold text-amber-400">Teste</th>
+<th class="px-4 py-3 font-semibold text-amber-400">Test</th>
 <th class="px-4 py-3 font-semibold text-amber-400">Sample</th>
-<th class="px-4 py-3 font-semibold text-amber-400">Sessões</th>
-<th class="px-4 py-3 font-semibold text-amber-400">% pensa (Fable vs Opus)</th>
-<th class="px-4 py-3 font-semibold text-amber-400">Leitura</th>
+<th class="px-4 py-3 font-semibold text-amber-400">Sessions</th>
+<th class="px-4 py-3 font-semibold text-amber-400">% thinks (Fable vs Opus)</th>
+<th class="px-4 py-3 font-semibold text-amber-400">Reading</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-dark-600">
 <tr>
 <td class="px-4 py-3 font-medium">1️⃣ local</td>
-<td class="px-4 py-3 text-neutral-300">~950 passos</td>
-<td class="px-4 py-3 text-neutral-300">7 sessões</td>
-<td class="px-4 py-3 text-neutral-300">99% vs 54% <span class="text-red-400 font-semibold">(+45pp)</span></td>
-<td class="px-4 py-3 text-red-400">enganoso</td>
+<td class="px-4 py-3 text-neutral-300">~950 steps</td>
+<td class="px-4 py-3 text-neutral-300">7 sessions</td>
+<td class="px-4 py-3 text-neutral-300">99% vs. 54% <span class="text-red-400 font-semibold">(+45pp)</span></td>
+<td class="px-4 py-3 text-red-400">misleading</td>
 </tr>
 <tr>
-<td class="px-4 py-3 font-medium">⚖️ igual</td>
-<td class="px-4 py-3 text-neutral-300">~950 cada</td>
-<td class="px-4 py-3 text-neutral-300">4 sessões (Opus)</td>
-<td class="px-4 py-3 text-neutral-300">Opus salta p/ <span class="text-amber-400 font-semibold">94%</span></td>
-<td class="px-4 py-3 text-amber-400">instável</td>
+<td class="px-4 py-3 font-medium">⚖️ equal</td>
+<td class="px-4 py-3 text-neutral-300">~950 each</td>
+<td class="px-4 py-3 text-neutral-300">4 sessions (Opus)</td>
+<td class="px-4 py-3 text-neutral-300">Opus jumps to <span class="text-amber-400 font-semibold">94%</span></td>
+<td class="px-4 py-3 text-amber-400">unstable</td>
 </tr>
 <tr>
 <td class="px-4 py-3 font-medium">📊 HF</td>
-<td class="px-4 py-3 text-neutral-300">4.892 passos</td>
-<td class="px-4 py-3 text-neutral-300">30 sessões</td>
+<td class="px-4 py-3 text-neutral-300">4.892 steps</td>
+<td class="px-4 py-3 text-neutral-300">30 sessions</td>
 <td class="px-4 py-3 text-neutral-300">85% vs 54% <span class="text-emerald-400 font-semibold">(+31pp)</span></td>
-<td class="px-4 py-3 text-emerald-400">sólido</td>
+<td class="px-4 py-3 text-emerald-400">solid</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Dataset</div><p class="text-xs text-neutral-400">Fable-5-traces (HF)</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Passos</div><p class="text-xs text-neutral-400">4.892 / 262 turnos</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Sessões</div><p class="text-xs text-neutral-400">30</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Delta sólido</div><p class="text-xs text-neutral-400">85 vs 54 = +31pp</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Steps</div><p class="text-xs text-neutral-400">4.892 / 262 turns</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Sessions</div><p class="text-xs text-neutral-400">30</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-amber-400 font-semibold text-sm mb-1">Solid delta</div><p class="text-xs text-neutral-400">85 vs 54 = +31pp</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -454,19 +453,19 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">🔀 Engano em DUAS direções</h2>
+<h2 class="text-2xl font-bold">🔀 Deception in TWO directions</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t5-p1">
-          Este é o ponto central do módulo. Amostra pequena não erra só "pra mais" — ela erra nas <strong class="text-amber-400">duas direções ao mesmo
-          tempo</strong>. No nosso caso, ela <strong class="text-amber-400">inflou</strong> o "pensar antes de agir" (mostrou 99%, o real é 85%) e ao mesmo
-          tempo <strong class="text-amber-400">escondeu</strong> uma vantagem real: o "teste após editar", que o local marcava em <strong>0%</strong>, na
-          amostra grande é <strong class="text-amber-400">41%</strong>. Ou seja: o sample pequeno mentiu pra cima num eixo e pra baixo no outro.
+          This is the module’s central point. A small sample isn’t just wrong "on the high side" — it’s wrong in the <strong class="text-amber-400">two directions at the same
+          time</strong>. In our case, it <strong class="text-amber-400">inflated</strong> the “think before acting” (showed 99%, the real figure is 85%) and at the same
+          time <strong class="text-amber-400">hid</strong> a real advantage: the "test after editing," which the local version marked in <strong>0%</strong>, in the
+          large sample is <strong class="text-amber-400">41%</strong>. In other words: the small sample overestimated one dimension and underestimated the other.
         </p>
 <!-- SVG: engano nas duas direções -->
 <div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="A amostra pequena engana nas duas direções: uma seta para cima infla o pensar de 85% para 99%, e uma seta para baixo esconde o teste após editar, mostrando 0% quando o real é 41%" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<svg aria-label="A small sample misleads in both directions: an upward arrow inflates thinking from 85% to 99%, and a downward arrow hides test after editing, showing 0% when the real figure is 41%." class="w-full h-auto" role="img" viewbox="0 0 1000 200">
 <defs>
 <lineargradient id="m41b-up" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="#f59e0b"></stop><stop offset="1" stop-color="#f87171"></stop></lineargradient>
 <lineargradient id="m41b-dn" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#38bdf8"></stop><stop offset="1" stop-color="#1e3a5f"></stop></lineargradient>
@@ -477,50 +476,50 @@
 <rect fill="url(#m41b-grid)" height="200" width="1000" x="0" y="0"></rect>
 <!-- linha do meio = amostra pequena -->
 <line opacity="0.5" stroke="#6b7280" stroke-dasharray="5 5" stroke-width="1" x1="60" x2="940" y1="100" y2="100"></line>
-<text fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="500" y="116">o que a amostra pequena mostrou</text>
+<text fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="500" y="116">what the small sample showed</text>
 <!-- direção 1: INFLA (pensar) -->
 <g font-family="Inter,sans-serif">
 <path d="M280,96 L280,40" fill="none" marker-end="url(#m41b-ahr)" stroke="url(#m41b-up)" stroke-width="3"></path>
 <rect fill="#2a1010" height="26" rx="7" stroke="#f87171" stroke-width="1.5" width="180" x="190" y="14"></rect>
-<text fill="#fca5a5" font-size="12" font-weight="600" text-anchor="middle" x="280" y="32">INFLOU o "pensar"</text>
+<text fill="#fca5a5" font-size="12" font-weight="600" text-anchor="middle" x="280" y="32">INFLATED the “thinking”</text>
 <text fill="#f87171" font-size="13" font-weight="700" text-anchor="middle" x="280" y="138">99% → 85%</text>
-<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="280" y="156">real é menor</text>
+<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="280" y="156">real is smaller</text>
 </g>
 <!-- direção 2: ESCONDE (teste após editar) -->
 <g font-family="Inter,sans-serif">
 <path d="M720,104 L720,160" fill="none" marker-end="url(#m41b-ahc)" stroke="url(#m41b-dn)" stroke-width="3"></path>
 <rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.5" width="180" x="630" y="160"></rect>
-<text fill="#bfe6ff" font-size="12" font-weight="600" text-anchor="middle" x="720" y="178">ESCONDEU o "testar"</text>
+<text fill="#bfe6ff" font-size="12" font-weight="600" text-anchor="middle" x="720" y="178">HID the “test”</text>
 <text fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle" x="720" y="64">0% → 41%</text>
-<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="720" y="82">real é maior</text>
+<text fill="#9ca3af" font-size="10.5" text-anchor="middle" x="720" y="82">real is larger</text>
 </g>
 </svg>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
-<h4 class="font-bold text-amber-400 mb-4">↑ Direção 1 — inflou</h4>
+<h4 class="font-bold text-amber-400 mb-4">↑ Direction 1 — inflated</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>"Pensar antes de agir": local dizia <strong class="text-amber-400">99%</strong>.</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>Amostra grande corrige para <strong class="text-amber-400">85%</strong>.</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>O excesso virou um +45pp falso sobre o Opus.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>“Think before acting”: the local setup said <strong class="text-amber-400">99%</strong>.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>Large sample corrects to <strong class="text-amber-400">85%</strong>.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">↑</span><span>The excess turned into a false +45pp over Opus.</span></li>
 </ul>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-<h4 class="font-bold text-blue-400 mb-4">↓ Direção 2 — escondeu</h4>
+<h4 class="font-bold text-blue-400 mb-4">↓ Direction 2 — hidden</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>"Teste após editar": local marcava <strong class="text-blue-400">0%</strong>.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>Na amostra grande o Fable testa <strong class="text-blue-400">41%</strong> (Opus 2%).</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>Uma vantagem real ficou invisível no sample pequeno.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>“Test after editing”: the local setup marked <strong class="text-blue-400">0%</strong>.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>In the large sample, Fable tests <strong class="text-blue-400">41%</strong> (Opus 2%).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">↓</span><span>A real advantage was hidden in the small sample.</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Lembre da honestidade da medida</h3>
-<p class="text-neutral-300 text-sm">O texto do <code class="font-mono text-amber-400">thinking</code> vem <strong>cifrado</strong> nos logs — então medimos a <strong>presença</strong> do pensar, não o conteúdo. Mesmo assim, a presença já basta para mostrar que a amostra pequena distorceu nos dois sentidos: inflou onde havia pouco e apagou onde havia muito.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Remember the honesty of the measurement</h3>
+<p class="text-neutral-300 text-sm">The <code class="font-mono text-amber-400">thinking</code> comes <strong>encrypted</strong> in the logs — so we measure the <strong>presence</strong> of the reasoning, not the content. Even so, its presence is enough to show that the small sample was skewed in both directions: it inflated areas where there was little and erased areas where there was a lot.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -529,63 +528,62 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">📐 A regra de ouro</h2>
+<h2 class="text-2xl font-bold">📐 The golden rule</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m4-1-t6-p1">
-          Tudo isso destila em três mandamentos. <strong class="text-amber-400">Nunca conclua</strong> de amostra pequena.
-          <strong class="text-amber-400">Equilibre os tamanhos</strong> antes de comparar (capar pelo nº de passos). E
-          <strong class="text-amber-400">confirme em amostra grande</strong> antes de acreditar. Foi seguindo essa régua que o +45pp eufórico virou
-          o +31pp defensável — e que a vantagem escondida do "testar" (0→41%) finalmente apareceu.
+          It all boils down to three commandments. <strong class="text-amber-400">Never conclude</strong> of a small sample.
+          <strong class="text-amber-400">Balance the sizes</strong> before comparing (cap by number of steps). And
+          <strong class="text-amber-400">confirm with a large sample</strong> before believing it. Following this standard is how the euphoric +45pp became a defensible +31pp — and how the hidden advantage of "testing" (0→41%) finally emerged.
         </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-6">
-<h4 class="font-bold text-amber-400 mb-4">✓ Faça assim</h4>
+<h4 class="font-bold text-amber-400 mb-4">✓ Do it this way</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Balanceie a amostra (ex.: ~950 passos cada lado).</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Exija volume nos dois lados, não só num.</span></li>
-<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Confirme num dataset grande antes de crer.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Balance the sample (e.g., ~950 steps per side).</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Require volume on both sides, not just one.</span></li>
+<li class="flex items-start space-x-2"><span class="text-amber-400">✓</span><span>Confirm with a large dataset before believing it.</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ Nunca faça</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ Never do this</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Fechar conta com 7 sessões só porque o número é bonito.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Comparar 950 passos contra 42k sem balancear.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Crer no 99% (ou no 94%) sem repetir com mais dados.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Closing the account with just 7 sessions because the number looks good.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Compare 950 steps against 42k without balancing.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Believe the 99% (or the 94%) without repeating the test with more data.</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> A régua em uma frase</h3>
-<p class="text-neutral-300 text-sm">Antes de acreditar que "modelo X é melhor que Y", pergunte: <strong>de quantas sessões saiu isso, e os dois lados estavam equilibrados?</strong> Se a resposta é "poucas" ou "não", você ainda não tem um número — tem uma impressão.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> The yardstick in one sentence</h3>
+<p class="text-neutral-300 text-sm">Before believing that “model X is better than Y,” ask: <strong>how many sessions this came from, and were both sides balanced?</strong> If the answer is “a few” or “no,” you don’t have a number yet—you have an impression.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 hover:bg-amber-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
 <!-- RESUMO -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🪤</span> Resumo do Módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🪤</span> Module Summary</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Três testes, em ordem</strong><span class="text-neutral-400"> — 7 sessões → amostra igual → 4.892 passos do HF.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Teste 1 — o sample minúsculo</strong><span class="text-neutral-400"> — 99% vs 54% (+45pp) de só 7 sessões. Enganoso.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Teste 2 — amostra igual</strong><span class="text-neutral-400"> — Opus salta p/ 94% num recorte de 4 sessões. Instável.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Teste 3 — 4.892 passos do HF</strong><span class="text-neutral-400"> — Fable 85% vs Opus 54% (+31pp). Sólido.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Engano em DUAS direções</strong><span class="text-neutral-400"> — inflou o "pensar" (99→85) E escondeu o "testar" (0→41%).</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">A regra de ouro</strong><span class="text-neutral-400"> — nunca conclua de amostra pequena; equilibre; confirme em amostra grande.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Three tests, in order</strong><span class="text-neutral-400"> — 7 sessions → equal sample → 4,892 HF steps.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Test 1 — the tiny sample</strong><span class="text-neutral-400"> — 99% vs. 54% (+45pp) from just 7 sessions. Misleading.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Test 2 — same sample</strong><span class="text-neutral-400"> — Opus jumps to 94% in a 4-session subset. Unstable.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Test 3 — 4,892 HF steps</strong><span class="text-neutral-400"> — Fable 85% vs. Opus 54% (+31pp). Solid.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Misleading in TWO directions</strong><span class="text-neutral-400"> — inflated “thinking” (99→85) AND hid “testing” (0→41%).</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">The golden rule</strong><span class="text-neutral-400"> — never draw conclusions from a small sample; balance it; confirm with a large sample.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-amber-400 mb-2">A seguir:</h3>
-<p class="text-neutral-300">Sabendo o que enganou, vamos às soluções aplicáveis — medir honesto, injetar a regra focada e reproduzir tudo.</p>
+<h3 class="font-semibold text-amber-400 mb-2">Next:</h3>
+<p class="text-neutral-300">Now that you know what misled you, let’s look at practical solutions—measure honestly, inject the focused rule, and reproduce everything.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha3/modulo-3-2.html">← Trilha 3</a>
-<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="modulo-4-2.html">Módulo 4.2 →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha3/modulo-3-2.html">← Track 3</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="modulo-4-2.html">Module 4.2 →</a>
 </div>
 </div>
 </section>
@@ -627,7 +625,7 @@
       document.addEventListener('inema:progress', sync);
     })();
   </script>
-<script src="../../assets/learn.js"></script>
+<script src="../../../assets/learn.js"></script>
 <script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
 </body>
 </html>

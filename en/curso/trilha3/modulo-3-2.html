@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="fable-lite" name="inema-course"/>
-<title>Módulo 3.2 · Injetando no Modelo | Fable Lite</title>
+<title>Module 3.2 · Injecting into the Model | Fable Lite</title>
 <!-- ANTI-FOUC -->
 <script>
   (function () {
@@ -66,7 +66,7 @@
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/learn.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
 <style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
@@ -125,8 +125,8 @@
     [id] { scroll-margin-top: 5rem; }
   </style>
 <link href="https://inematds.github.io/fablelite/curso/trilha3/modulo-3-2.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/fablelite/en/curso/trilha3/modulo-3-2.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/fablelite/es/curso/trilha3/modulo-3-2.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-3-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha3/modulo-3-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha3/modulo-3-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/modulo-3-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-3-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha3/modulo-3-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded-lg" href="#conteudo">Skip to content</a>
 <!-- NAV -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,24 +140,24 @@
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
-<span class="sm:hidden">T1</span><span class="hidden sm:inline">Os Logs São Ouro</span>
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Logs Are Gold</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">A Mão na Massa</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Hands-On</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">From Delta to Playbook</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
-<span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
+<span class="sm:hidden">T4</span><span class="hidden sm:inline">The Real Proof</span>
 </a>
 <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Minha jornada</span>
+<span aria-hidden="true">◷</span><span>My journey</span>
 <span aria-hidden="true" class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
 </button>
-<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Aparência" type="button"><span aria-hidden="true">◑</span></button>
+<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Appearance" type="button"><span aria-hidden="true">◑</span></button>
 <div class="inema-appearance-pop" data-inema-appearance=""></div>
-<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Tema claro/escuro">
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Light/dark theme">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
 </button>
@@ -166,53 +166,53 @@
 </div>
 </nav>
 <!-- BREADCRUMB -->
-<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Navigation track" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
-<a class="hover:text-purple-400" href="../../index.html">Início</a><span>/</span>
-<a class="hover:text-purple-400" href="index.html">Trilha 3</a><span>/</span>
-<span class="text-purple-400">Módulo 3.2</span>
+<a class="hover:text-purple-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span>
+<span class="text-purple-400">Module 3.2</span>
 </div>
 </nav>
 <!-- HEADER -->
 <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-inema-module="3-2" data-inema-track="3" id="modulo-3-2">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.2</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">💉 Injetando no Modelo (e Sem Dados Próprios)</h1>
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">💉 Injecting into the Model (and With No Data of Your Own)</h1>
 <p class="text-lg text-neutral-400 max-w-3xl">
-        O playbook só vale se ENTRAR no contexto. Aqui: o hook <code class="font-mono text-purple-400">SessionStart</code>, virar skill, o <code class="font-mono text-purple-400">CLAUDE.md</code>,
-        o plano B com traces abertos no Hugging Face para quem não tem dados próprios, o que transfere e o que NÃO, e a ética de fechar o loop.
+        The playbook only works if it ENTERS the context. Here: the hook <code class="font-mono text-purple-400">SessionStart</code>, turn into a skill, the <code class="font-mono text-purple-400">CLAUDE.md</code>,
+        the plan B with open traces on Hugging Face for those without their own data, what transfers and what DOESN'T, and the ethics of closing the loop.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Aplicado</div><div class="text-xs text-neutral-400">Nível</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Applied</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Practice</div><div class="text-xs text-neutral-400">Type</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
 <!-- TOC -->
-<nav aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
-<div aria-label="Progresso do módulo 3.2" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:3-2" role="progressbar">
-<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo 3.2</span><span class="text-purple-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
+<nav aria-label="Page index" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
+<div aria-label="Module 3.2 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:3-2" role="progressbar">
+<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Module 3.2</span><span class="text-purple-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
 <div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 de 0</span>
+<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 of 0</span>
 </div>
-<p class="text-sm text-neutral-400 mb-2">Seção <span data-inema-section-counter="">1 de 6</span></p>
+<p class="text-sm text-neutral-400 mb-2">Section <span data-inema-section-counter="">1 of 6</span></p>
 <ul class="space-y-1 text-sm">
 <li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-1">1. Hook SessionStart</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-2">2. Virar skill</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-2">2. Turn it into a skill</a></li>
 <li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-3">3. CLAUDE.md</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-4">4. Sem dados? HF</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-5">5. O que transfere</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-6">6. Ética e generalização</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-4">4. No data? HF</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-5">5. What transfers</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-purple-400" href="#topico-6">6. Ethics and generalization</a></li>
 </ul>
 </nav>
 <main id="conteudo">
 <!-- SVG do módulo: três canais de injeção convergem no início da sessão -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
-<svg aria-label="O playbook entra no contexto por três canais — hook SessionStart, skill e CLAUDE.md — todos convergindo no additionalContext do início da sessão" class="w-full h-auto" role="img" viewbox="0 0 1000 220">
+<svg aria-label="The playbook enters the context through three channels—SessionStart hook, skill, and CLAUDE.md—all converging in the additionalContext at the start of the session" class="w-full h-auto" role="img" viewbox="0 0 1000 220">
 <defs>
 <lineargradient id="m32-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
 <filter height="180%" id="m32-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -223,7 +223,7 @@
 <!-- playbook fonte -->
 <rect fill="#1a1230" height="52" rx="13" stroke="#c084fc" stroke-width="2" width="160" x="30" y="84"></rect>
 <text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="110" y="106">playbook.md</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="124">a fonte</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="124">the source</text>
 <!-- três canais -->
 <g fill="none" opacity="0.5" stroke="#38bdf8" stroke-width="1.8">
 <path d="M190,100 C290,100 310,46 420,46" marker-end="url(#m32-ahc)"></path>
@@ -231,8 +231,8 @@
 <path d="M190,120 C290,120 310,174 420,174" marker-end="url(#m32-ahc)"></path>
 </g>
 <g font-family="Inter,sans-serif" font-size="12.5" font-weight="600">
-<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="190" x="420" y="30"></rect><text fill="#bfe6ff" text-anchor="middle" x="515" y="51">hook SessionStart</text></g>
-<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="190" x="420" y="94"></rect><text fill="#bfe6ff" text-anchor="middle" x="515" y="115">skill fable-mindset</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="190" x="420" y="30"></rect><text fill="#bfe6ff" text-anchor="middle" x="515" y="51">SessionStart hook</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="190" x="420" y="94"></rect><text fill="#bfe6ff" text-anchor="middle" x="515" y="115">fable-mindset skill</text></g>
 <g class="wf-a"><rect fill="#0e1b26" height="32" rx="9" stroke="#38bdf8" stroke-width="2" width="190" x="420" y="158"></rect><text fill="#bfe6ff" text-anchor="middle" x="515" y="179">CLAUDE.md</text></g>
 </g>
 <g fill="none" opacity="0.5" stroke="#38bdf8" stroke-width="1.8">
@@ -243,7 +243,7 @@
 <!-- additionalContext (caixa-foco) -->
 <g filter="url(#m32-glow)"><rect fill="#1a1230" height="64" rx="14" stroke="url(#m32-grad)" stroke-width="2.5" width="176" x="800" y="78"></rect></g>
 <text fill="#c084fc" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle" x="888" y="105">additionalContext</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="888" y="125">início da sessão</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="888" y="125">session start</text>
 </svg>
 </div>
 <!-- TÓPICO 1 -->
@@ -251,14 +251,14 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">🪝 Hook SessionStart</h2>
+<h2 class="text-2xl font-bold">🪝 SessionStart Hook</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t1-p1">
-          O caminho "sempre ativo, sem pensar": o script <code class="font-mono text-purple-400">inject-playbook.sh</code> injeta o playbook como
-          <code class="font-mono text-purple-400">additionalContext</code> a cada sessão. Você o aponta no evento <code class="font-mono text-purple-400">SessionStart</code> do <code class="font-mono text-purple-400">settings.json</code>.
-          E é <strong class="text-purple-400">fail-open</strong>: se o arquivo do playbook não existir, a sessão segue normal — nada quebra.
+          The "always on, no thinking required" approach: the script <code class="font-mono text-purple-400">inject-playbook.sh</code> injects the playbook as
+          <code class="font-mono text-purple-400">additionalContext</code> each session. You point it to the event <code class="font-mono text-purple-400">SessionStart</code> of the <code class="font-mono text-purple-400">settings.json</code>.
+          E é <strong class="text-purple-400">fail-open</strong>: if the playbook file doesn't exist, the session continues normally — nothing breaks.
         </p>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-xs overflow-x-auto">
 <pre class="text-neutral-300"><span class="text-neutral-500">// ~/.claude/settings.json</span>
@@ -278,21 +278,21 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-<h4 class="font-bold text-purple-400 mb-4">✓ O que o hook faz</h4>
+<h4 class="font-bold text-purple-400 mb-4">✓ What the hook does</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Lê o <code class="font-mono text-purple-400">.md</code> e devolve via <code class="font-mono text-purple-400">additionalContext</code>.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Dispara no <code class="font-mono text-purple-400">startup</code> de cada sessão.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Aponta para outro arquivo via <code class="font-mono text-purple-400">FABLE_PLAYBOOK=</code>.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Reads the <code class="font-mono text-purple-400">.md</code> and return via <code class="font-mono text-purple-400">additionalContext</code>.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Fires in the <code class="font-mono text-purple-400">startup</code> of each session.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Points to another file via <code class="font-mono text-purple-400">FABLE_PLAYBOOK=</code>.</span></li>
 </ul>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> Fail-open na prática</h3>
-<p class="text-neutral-300 text-sm">Se o playbook não existir, o script imprime <code class="font-mono text-blue-400">{"continue":true}</code> e sai com código 0 — a sessão começa normalmente. Injeção é um bônus, nunca um ponto de falha.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> Fail-open in practice</h3>
+<p class="text-neutral-300 text-sm">If the playbook doesn’t exist, the script prints <code class="font-mono text-blue-400">{"continue":true}</code> and exits with code 0 — the session starts normally. Injection is a bonus, never a failure point.</p>
 </div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -301,38 +301,38 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">🧩 Virar skill</h2>
+<h2 class="text-2xl font-bold">🧩 Turn it into a skill</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t2-p1">
-          Nem sempre você quer o playbook em TODA sessão. A skill <code class="font-mono text-purple-400">fable-mindset</code> carrega o playbook
-          <strong class="text-purple-400">sob demanda</strong> e ainda traz os scripts junto (debloat, extract, compare, make_playbook). É o canal de quando você prefere
-          invocar explicitamente em vez de injetar sempre.
+          You don't always want the playbook in EVERY session. The skill <code class="font-mono text-purple-400">fable-mindset</code> loads the playbook
+          <strong class="text-purple-400">on demand</strong> and includes the scripts (debloat, extract, compare, make_playbook). This is the channel to use when you prefer
+          to invoke it explicitly instead of always injecting it.
         </p>
 <div class="space-y-4 mb-6">
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">›</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-purple-400 mb-1">Sob demanda</h4>
-<p class="text-neutral-300 text-sm">O modelo consulta o playbook quando a tarefa é de código — não em toda conversa. Você controla o quando.</p>
+<h4 class="font-semibold text-purple-400 mb-1">On demand</h4>
+<p class="text-neutral-300 text-sm">The model consults the playbook for coding tasks—not in every conversation. You control when.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">›</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-purple-400 mb-1">Scripts incluídos</h4>
-<p class="text-neutral-300 text-sm">A skill traz o pipeline inteiro: dá para re-medir e regenerar o playbook a partir da própria invocação.</p>
+<h4 class="font-semibold text-purple-400 mb-1">Included scripts</h4>
+<p class="text-neutral-300 text-sm">The skill includes the entire pipeline: you can remeasure and regenerate the playbook from the invocation itself.</p>
 </div>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">A skill <code class="font-mono text-purple-400">fable-mindset</code> mora em <code class="font-mono text-purple-400">~/.claude/skills/fable-mindset/</code>. Use-a quando quiser o playbook E as ferramentas na mão, sem deixá-lo ativo o tempo todo.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">The skill <code class="font-mono text-purple-400">fable-mindset</code> lives in <code class="font-mono text-purple-400">~/.claude/skills/fable-mindset/</code>. Use it when you want the playbook AND the tools at hand, without leaving it active all the time.</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -341,54 +341,54 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">📄 CLAUDE.md — o caminho mais simples</h2>
+<h2 class="text-2xl font-bold">📄 CLAUDE.md — the simplest path</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t3-p1">
-          O mínimo esforço: cole o conteúdo do playbook (ou um link para ele) no <code class="font-mono text-purple-400">CLAUDE.md</code> — global ou de projeto. Ele já é
-          <strong class="text-purple-400">auto-injetado</strong> em toda sessão, versionado junto do repo, sem nenhuma configuração de hook. Três canais, três trade-offs — escolha pelo que você precisa:
+          The minimum-effort option: paste the playbook contents (or a link to it) into the <code class="font-mono text-purple-400">CLAUDE.md</code> — global or project-level. It’s already
+          <strong class="text-purple-400">auto-injected</strong> in every session, versioned with the repo, with no hook configuration. Three channels, three trade-offs — choose based on what you need:
         </p>
 <!-- TABELA: qual escolher -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
 <table class="w-full text-sm">
 <thead class="bg-dark-700/60">
 <tr class="text-left">
-<th class="px-4 py-3 font-semibold text-purple-400">Canal</th>
-<th class="px-4 py-3 font-semibold text-purple-400">Quando ativa</th>
-<th class="px-4 py-3 font-semibold text-purple-400">Escolha se…</th>
+<th class="px-4 py-3 font-semibold text-purple-400">Channel</th>
+<th class="px-4 py-3 font-semibold text-purple-400">When active</th>
+<th class="px-4 py-3 font-semibold text-purple-400">Choose whether…</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-dark-600">
 <tr>
 <td class="px-4 py-3 font-medium">🪝 Hook</td>
-<td class="px-4 py-3 text-neutral-300">sempre ativo (todo SessionStart)</td>
-<td class="px-4 py-3 text-neutral-400">quer sem pensar, em toda sessão</td>
+<td class="px-4 py-3 text-neutral-300">always active (every SessionStart)</td>
+<td class="px-4 py-3 text-neutral-400">wants no thinking in every session</td>
 </tr>
 <tr>
 <td class="px-4 py-3 font-medium">🧩 Skill</td>
-<td class="px-4 py-3 text-neutral-300">sob demanda + os scripts</td>
-<td class="px-4 py-3 text-neutral-400">quer invocar explicitamente</td>
+<td class="px-4 py-3 text-neutral-300">on demand + the scripts</td>
+<td class="px-4 py-3 text-neutral-400">wants to invoke explicitly</td>
 </tr>
 <tr>
 <td class="px-4 py-3 font-medium">📄 CLAUDE.md</td>
-<td class="px-4 py-3 text-neutral-300">auto-injetado, versionado</td>
-<td class="px-4 py-3 text-neutral-400">quer mínimo esforço</td>
+<td class="px-4 py-3 text-neutral-300">auto-injected, versioned</td>
+<td class="px-4 py-3 text-neutral-400">wants minimal effort</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> Resumo da decisão</h3>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> Decision summary</h3>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li><strong>Sempre ativo, sem pensar</strong> → hook <code class="font-mono text-blue-400">SessionStart</code>.</li>
-<li><strong>Sob demanda + os scripts juntos</strong> → skill.</li>
-<li><strong>Mínimo esforço</strong> → <code class="font-mono text-blue-400">CLAUDE.md</code>.</li>
+<li><strong>Always active, without thinking</strong> → hook <code class="font-mono text-blue-400">SessionStart</code>.</li>
+<li><strong>On demand + the scripts together</strong> → skill.</li>
+<li><strong>Minimum effort</strong> → <code class="font-mono text-blue-400">CLAUDE.md</code>.</li>
 </ul>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -397,14 +397,14 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">🤗 Sem dados do Fable? Os traces abertos</h2>
+<h2 class="text-2xl font-bold">🤗 No Fable data? The open traces</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t4-p1">
-          E se você mal teve tempo de conversar com o Fable e não tem sessões dele para minerar? Pessoas abriram as próprias sessões no Hugging Face:
-          <code class="font-mono text-purple-400">Glint-Research/Fable-5-traces</code>. O <code class="font-mono text-purple-400">import_hf_traces.py</code> baixa o dataset e roda o
-          <strong class="text-purple-400">MESMO exercício comportamental</strong> sobre dados de terceiros — mesma leitura de ferramentas/turno, raciocínio e ordem de trabalho.
+          What if you barely had time to talk with Fable and don't have any sessions to mine? People opened their own sessions on Hugging Face:
+          <code class="font-mono text-purple-400">Glint-Research/Fable-5-traces</code>. O <code class="font-mono text-purple-400">import_hf_traces.py</code> downloads the dataset and runs the
+          <strong class="text-purple-400">SAME behavioral exercise</strong> about third-party data — same reading of tools/turns, reasoning, and work order.
         </p>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-sm overflow-x-auto">
 <pre class="text-neutral-300">pip install datasets
@@ -417,18 +417,18 @@ python import_hf_traces.py <span class="text-purple-400">--peek</span>
 python import_hf_traces.py --out corpus_fable_hf</pre>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">O importador é <strong>defensivo</strong>: tenta mapear formatos comuns (chat, JSONL embutido, transcrição crua). Se a contagem sair estranha, abra um registro com <code class="font-mono text-purple-400">--peek</code> e ajuste <code class="font-mono text-purple-400">record_to_events()</code>. Depois, <code class="font-mono text-purple-400">make_playbook.py --from-json</code> vira playbook (lado <code class="font-mono text-purple-400">a</code> = estes dados).</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">The importer is <strong>defensive</strong>: tries to map common formats (chat, embedded JSONL, raw transcript). If the count looks odd, open a record with <code class="font-mono text-purple-400">--peek</code> and adjust <code class="font-mono text-purple-400">record_to_events()</code>. Then, <code class="font-mono text-purple-400">make_playbook.py --from-json</code> becomes a playbook (side <code class="font-mono text-purple-400">a</code> = this data).</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Dataset</div><p class="text-xs text-neutral-400">Fable-5-traces (HF)</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Requisito</div><p class="text-xs text-neutral-400">pip install datasets</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Requirement</div><p class="text-xs text-neutral-400">pip install datasets</p></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Script</div><p class="text-xs text-neutral-400">import_hf_traces.py</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Resultado</div><p class="text-xs text-neutral-400">mesmo exercício</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Result</div><p class="text-xs text-neutral-400">same exercise</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -437,39 +437,39 @@ python import_hf_traces.py --out corpus_fable_hf</pre>
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">🎚️ O que transfere e o que NÃO</h2>
+<h2 class="text-2xl font-bold">🎚️ What transfers and what does NOT</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t5-p1">
-          A expectativa honesta: você imita o <strong class="text-purple-400">RITMO</strong> (pensar antes, ler antes de editar, fechar o loop), <strong>não clona o modelo</strong>.
-          O poder do Fable está nos pesos — e isso o playbook não atravessa. O que ele faz é melhorar a <strong class="text-purple-400">execução</strong> do modelo-alvo; ele não vira Fable.
+          The honest expectation: you imitate the <strong class="text-purple-400">PACE</strong> (think before, read before editing, close the loop), <strong>don’t clone the model</strong>.
+          Fable’s power lies in the weights — and the playbook can’t transfer those. What it does is improve the <strong class="text-purple-400">execution</strong> of the target model; it doesn't become Fable.
         </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-<h4 class="font-bold text-purple-400 mb-4">✓ TRANSFERE (o ritmo)</h4>
+<h4 class="font-bold text-purple-400 mb-4">✓ TRANSFERS (the rhythm)</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Pensar antes de agir no não-trivial.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Ler antes de editar; ferramenta com propósito.</span></li>
-<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Fechar o loop com teste/build.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Think before acting on non-trivial tasks.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Read before editing; use tools with purpose.</span></li>
+<li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Close the loop with a test/build.</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ NÃO transfere</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ Does NOT transfer</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Os pesos do modelo — onde mora o poder.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Virar Fable: a identidade não muda.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>O conteúdo do raciocínio (vem cifrado nos logs).</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The model weights—where the power resides.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Become Fable: the identity doesn’t change.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The contents of the reasoning (encrypted in the logs).</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> A leitura honesta</h3>
-<p class="text-neutral-300 text-sm">O playbook é uma melhoria de processo, não um transplante de capacidade. Ele dá ao modelo-alvo o ritmo bom medido no Fable — ganho real, sem promessa mágica de "transformar Opus em Fable".</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> The honest reading</h3>
+<p class="text-neutral-300 text-sm">The playbook is a process improvement, not a capability transplant. It gives the target model the good pace measured in Fable—a real gain, without the magical promise of "turning Opus into Fable".</p>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -478,17 +478,17 @@ python import_hf_traces.py --out corpus_fable_hf</pre>
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">⚖️ Ética e generalização</h2>
+<h2 class="text-2xl font-bold">⚖️ Ethics and generalization</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m3-2-t6-p1">
-          Para fechar o loop com responsabilidade: rode no SEU histórico; trate o corpus como <strong class="text-purple-400">sensível</strong> — ele tem seu código e seus dados.
-          O método não é exclusivo do par Fable/Opus: aplica a Opus, Codex e modelos open-source. E mantenha o playbook vivo: <strong class="text-purple-400">itere</strong> com novos dados conforme você acumula sessões.
+          To close the loop responsibly: run it on YOUR history; treat the corpus as <strong class="text-purple-400">sensitive</strong> — it has your code and your data.
+          The method isn’t exclusive to the Fable/Opus pair: it applies to Opus, Codex, and open-source models. And keep the playbook up to date: <strong class="text-purple-400">iterate</strong> with new data as you accumulate sessions.
         </p>
 <!-- SVG: o loop fecha e itera -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="O loop completo: logs viram delta, o delta vira playbook, o playbook é injetado no modelo, e novos logs realimentam a medição" class="w-full h-auto" role="img" viewbox="0 0 1000 170">
+<svg aria-label="The full loop: logs become a delta, the delta becomes a playbook, the playbook is injected into the model, and new logs feed back into the measurement" class="w-full h-auto" role="img" viewbox="0 0 1000 170">
 <defs>
 <lineargradient id="m32b-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
 <filter height="180%" id="m32b-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -499,11 +499,11 @@ python import_hf_traces.py --out corpus_fable_hf</pre>
 <rect fill="url(#m32b-grid)" height="170" width="1000" x="0" y="0"></rect>
 <g font-family="Inter,sans-serif" font-size="12.5" font-weight="600">
 <rect fill="#1a1230" height="40" rx="11" stroke="#c084fc" stroke-width="2" width="150" x="24" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="99" y="73">logs</text>
-<rect fill="#1a1230" height="40" rx="11" stroke="#c084fc" stroke-width="2" width="150" x="270" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="345" y="73">delta medido</text>
+<rect fill="#1a1230" height="40" rx="11" stroke="#c084fc" stroke-width="2" width="150" x="270" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="345" y="73">measured delta</text>
 <rect fill="#1a1230" height="40" rx="11" stroke="#c084fc" stroke-width="2" width="150" x="516" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="591" y="73">playbook</text>
 </g>
 <g filter="url(#m32b-glow)"><rect fill="#1a1230" height="48" rx="13" stroke="url(#m32b-grad)" stroke-width="2.5" width="170" x="762" y="44"></rect></g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="847" y="73">injetado no modelo</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="847" y="73">injected into the model</text>
 <g fill="none" opacity="0.55" stroke="#c084fc" stroke-width="1.8">
 <path d="M174,68 L270,68" marker-end="url(#m32b-ah)"></path>
 <path d="M420,68 L516,68" marker-end="url(#m32b-ah)"></path>
@@ -511,44 +511,44 @@ python import_hf_traces.py --out corpus_fable_hf</pre>
 </g>
 <!-- realimentação (ciano, volta) -->
 <path d="M847,92 C847,140 99,140 99,92" fill="none" marker-end="url(#m32b-ahc)" opacity="0.5" stroke="#38bdf8" stroke-dasharray="7 6" stroke-width="1.8"></path>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="473" y="158">novos logs realimentam — itere o playbook</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="473" y="158">new logs feed back in — iterate on the playbook</text>
 </svg>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> O corpus é sensível</h3>
-<p class="text-neutral-300 text-sm">Seus logs contêm código, caminhos e possivelmente segredos. Trate-os como dado pessoal: redija antes de compartilhar e não os exponha. O ouro é o ritmo, não os dados — e o ritmo você pode publicar; os dados, não.</p>
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> The corpus is sensitive</h3>
+<p class="text-neutral-300 text-sm">Your logs contain code, paths, and possibly secrets. Treat them as personal data: redact them before sharing, and don’t expose them. The gold is the rhythm, not the data—and you can publish the rhythm, but not the data.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Rode em</div><p class="text-xs text-neutral-400">seu histórico</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Corpus</div><p class="text-xs text-neutral-400">trate como sensível</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Aplica a</div><p class="text-xs text-neutral-400">Opus/Codex/open-source</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Mantenha</div><p class="text-xs text-neutral-400">iterando com novos dados</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Run on</div><p class="text-xs text-neutral-400">your history</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Corpus</div><p class="text-xs text-neutral-400">treat as sensitive</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Apply the</div><p class="text-xs text-neutral-400">Opus/Codex/open-source</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-purple-400 font-semibold text-sm mb-1">Keep</div><p class="text-xs text-neutral-400">iterating with new data</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
 <!-- RESUMO -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">💉</span> Resumo do Módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">💉</span> Module Summary</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Hook <code class="font-mono text-purple-400">SessionStart</code></strong><span class="text-neutral-400"> — injeta como <code class="font-mono text-purple-400">additionalContext</code>, fail-open.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Skill <code class="font-mono text-purple-400">fable-mindset</code></strong><span class="text-neutral-400"> — sob demanda, com os scripts juntos.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-purple-400">CLAUDE.md</code></strong><span class="text-neutral-400"> — auto-injetado, mínimo esforço.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Sem dados? <code class="font-mono text-purple-400">import_hf_traces.py</code></strong><span class="text-neutral-400"> — <code class="font-mono text-purple-400">Glint-Research/Fable-5-traces</code> no HF.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Você imita o RITMO, não clona o modelo</strong><span class="text-neutral-400"> — o poder está nos pesos.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Corpus sensível; itere com novos dados</strong><span class="text-neutral-400"> — o loop fecha e recomeça.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Hook <code class="font-mono text-purple-400">SessionStart</code></strong><span class="text-neutral-400"> — inject as <code class="font-mono text-purple-400">additionalContext</code>, fail-open.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Skill <code class="font-mono text-purple-400">fable-mindset</code></strong><span class="text-neutral-400"> — on demand, with the scripts together.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-purple-400">CLAUDE.md</code></strong><span class="text-neutral-400"> — auto-injected, minimal effort.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">No data? <code class="font-mono text-purple-400">import_hf_traces.py</code></strong><span class="text-neutral-400"> — <code class="font-mono text-purple-400">Glint-Research/Fable-5-traces</code> in HF.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">You imitate the RHYTHM, not clone the model</strong><span class="text-neutral-400"> — the power is in the weights.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Sensitive corpus; iterate with new data</strong><span class="text-neutral-400"> — the loop closes and starts again.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-purple-400 mb-2">Fim da trilha:</h3>
-<p class="text-neutral-300">Do log ao playbook injetado — o método é seu. Rode no seu histórico e itere.</p>
+<h3 class="font-semibold text-purple-400 mb-2">End of the learning path:</h3>
+<p class="text-neutral-300">From the log to the injected playbook—the method is yours. Run it on your history and iterate.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-1.html">← Módulo Anterior</a>
-<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="index.html">Voltar para a Trilha →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-1.html">← Previous Module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="index.html">Back to the Learning Path →</a>
 </div>
 </div>
 </section>
@@ -590,7 +590,7 @@ python import_hf_traces.py --out corpus_fable_hf</pre>
       document.addEventListener('inema:progress', sync);
     })();
   </script>
-<script src="../../assets/learn.js"></script>
+<script src="../../../assets/learn.js"></script>
 <script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="pt-BR">
+<html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="fable-lite" name="inema-course"/>
-<title>Módulo 2.1 · Debloat: Destilando a Transcrição | Fable Lite</title>
+<title>Module 2.1 · Debloat: Distilling the Transcript | Fable Lite</title>
 <!-- ANTI-FOUC -->
 <script>
   (function () {
@@ -66,7 +66,7 @@
     tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/learn.css" rel="stylesheet"/>
+<link href="../../../assets/learn.css" rel="stylesheet"/>
 <style>
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
@@ -123,8 +123,8 @@
     [id] { scroll-margin-top: 5rem; }
   </style>
 <link href="https://inematds.github.io/fablelite/curso/trilha2/modulo-2-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/fablelite/en/curso/trilha2/modulo-2-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/fablelite/es/curso/trilha2/modulo-2-1.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-2-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha2/modulo-2-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha2/modulo-2-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg" href="#conteudo">Pular para o conteúdo</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha2/modulo-2-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-2-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha2/modulo-2-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg" href="#conteudo">Skip to content</a>
 <!-- NAV -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,24 +138,24 @@
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
-<span class="sm:hidden">T1</span><span class="hidden sm:inline">Os Logs São Ouro</span>
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Logs Are Gold</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">A Mão na Massa</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Hands-On</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Do Delta ao Playbook</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">From Delta to Playbook</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html">
-<span class="sm:hidden">T4</span><span class="hidden sm:inline">A Prova Real</span>
+<span class="sm:hidden">T4</span><span class="hidden sm:inline">The Real Proof</span>
 </a>
 <button class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Minha jornada</span>
+<span aria-hidden="true">◷</span><span>My journey</span>
 <span aria-hidden="true" class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
 </button>
-<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Aparência" type="button"><span aria-hidden="true">◑</span></button>
+<button aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" data-inema-appearance-toggle="[data-inema-appearance]" title="Appearance" type="button"><span aria-hidden="true">◑</span></button>
 <div class="inema-appearance-pop" data-inema-appearance=""></div>
-<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Tema claro/escuro">
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" id="theme-toggle" title="Light/dark theme">
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
 </button>
@@ -164,54 +164,54 @@
 </div>
 </nav>
 <!-- BREADCRUMB -->
-<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Navigation track" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
-<a class="hover:text-blue-400" href="../../index.html">Início</a><span>/</span>
-<a class="hover:text-blue-400" href="index.html">Trilha 2</a><span>/</span>
-<span class="text-blue-400">Módulo 2.1</span>
+<a class="hover:text-blue-400" href="../../index.html">Start</a><span>/</span>
+<a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span>
+<span class="text-blue-400">Module 2.1</span>
 </div>
 </nav>
 <!-- HEADER -->
 <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-inema-module="2-1" data-inema-track="2" id="modulo-2-1">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.1</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧪 Debloat: Destilando a Transcrição</h1>
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧪 Debloat: Distilling the Transcript</h1>
 <p class="text-lg text-neutral-400 max-w-3xl">
-        Antes de medir, é preciso destilar. Neste módulo: por que os logs crus são pesados, o que o
-        <code class="font-mono text-blue-400">debloat_jsonl.py</code> mantém e o que descarta, como rodá-lo, os <strong class="text-blue-400">~74%</strong> que somem,
-        e a pegadinha do schema que justifica agrupar tudo em turno lógico.
+        Before measuring, you need to distill. In this module: why raw logs are large, what the
+        <code class="font-mono text-blue-400">debloat_jsonl.py</code> keeps and what it discards, how to run it, the <strong class="text-blue-400">~74%</strong> that disappear,
+        and the schema gotcha that justifies grouping everything into a logical turn.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prático</div><div class="text-xs text-neutral-400">Nível</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">25</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Hands-on</div><div class="text-xs text-neutral-400">Type</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-10">
 <!-- TOC -->
-<nav aria-label="Índice da página" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
-<div aria-label="Progresso do módulo 2.1" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:2-1" role="progressbar">
-<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Módulo 2.1</span><span class="text-blue-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
+<nav aria-label="Page index" class="hidden lg:block sticky top-24 self-start" data-inema-toc="">
+<div aria-label="Module 2.1 progress" aria-valuemax="100" aria-valuemin="0" class="inema-meter mb-4 bg-dark-800 border border-dark-600 rounded-lg p-3" data-inema-meter="modulo:2-1" role="progressbar">
+<div class="flex items-center justify-between mb-1"><span class="text-xs text-neutral-400">Module 2.1</span><span class="text-blue-400 font-bold text-sm" data-inema-meter-pct="">0%</span></div>
 <div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 de 0</span>
+<span class="text-xs text-neutral-500" data-inema-meter-frac="">0 of 0</span>
 </div>
-<p class="text-sm text-neutral-400 mb-2">Seção <span data-inema-section-counter="">1 de 6</span></p>
+<p class="text-sm text-neutral-400 mb-2">Section <span data-inema-section-counter="">1 of 6</span></p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-1">1. Logs pesados</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-2">2. O que MANTÉM</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-3">3. O que DESCARTA</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-1">1. Heavy logs</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-2">2. What to KEEP</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-3">3. What to DISCARD</a></li>
 <li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-4">4. debloat_jsonl.py</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-5">5. ~74% de redução</a></li>
-<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-6">6. A pegadinha do schema</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-5">5. ~74% reduction</a></li>
+<li><a class="inema-toc-link text-neutral-400 hover:text-blue-400" href="#topico-6">6. The schema trap</a></li>
 </ul>
 </nav>
 <main id="conteudo">
 <!-- SVG do módulo: o que passa pelo filtro do debloat -->
 <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
-<svg aria-label="O debloat é um filtro: à esquerda entra o JSONL cru com gordura e ouro misturados; o filtro deixa passar prompts, texto, model, tool_use e a marca de raciocínio, e barra tool_result, blobs e metadados do harness" class="w-full h-auto" role="img" viewbox="0 0 1000 220">
+<svg aria-label="Debloating is a filter: raw JSONL with bloat and gold mixed together comes in on the left; the filter lets prompts, text, model, tool_use, and the reasoning marker through, and blocks tool_result, blobs, and harness metadata" class="w-full h-auto" role="img" viewbox="0 0 1000 220">
 <defs>
 <lineargradient id="m21-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
 <filter height="180%" id="m21-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -222,21 +222,21 @@
 <rect fill="url(#m21-grid)" height="220" width="1000" x="0" y="0"></rect>
 <!-- entrada cru -->
 <rect fill="#0e1622" height="100" rx="13" stroke="#60a5fa" stroke-width="2" width="160" x="30" y="60"></rect>
-<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="110" y="86">JSONL cru</text>
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="108">ouro + gordura</text>
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="126">misturados</text>
+<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="110" y="86">Raw JSONL</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="108">gold + overhead</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="110" y="126">mixed</text>
 <path d="M190,110 L300,110" fill="none" marker-end="url(#m21-ah)" opacity="0.55" stroke="#60a5fa" stroke-width="1.8"></path>
 <!-- filtro -->
 <g filter="url(#m21-glow)"><rect fill="#0e1622" height="72" rx="14" stroke="url(#m21-grad)" stroke-width="2" width="120" x="300" y="74"></rect></g>
 <text fill="#60a5fa" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="360" y="106">debloat</text>
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="360" y="124">filtro</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="360" y="124">filter</text>
 <!-- MANTÉM (passa) — stream secundária em ciano -->
 <path d="M420,96 L520,68" fill="none" marker-end="url(#m21-ahc)" opacity="0.55" stroke="#38bdf8" stroke-width="1.8"></path>
 <g font-family="Inter,sans-serif" font-size="11">
-<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="22"></rect><text fill="#bfe6ff" x="532" y="39">✓ prompts + texto</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="22"></rect><text fill="#bfe6ff" x="532" y="39">✓ prompts + text</text></g>
 <g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="54"></rect><text fill="#bfe6ff" x="532" y="71">✓ message.model</text></g>
-<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="86"></rect><text fill="#bfe6ff" x="532" y="103">✓ tool_use (1 linha)</text></g>
-<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="118"></rect><text fill="#bfe6ff" x="532" y="135">✓ 🧠 raciocínio (presença)</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="86"></rect><text fill="#bfe6ff" x="532" y="103">✓ tool_use (1 line)</text></g>
+<g class="wf-a"><rect fill="#0e1b26" height="26" rx="7" stroke="#38bdf8" stroke-width="1.6" width="200" x="520" y="118"></rect><text fill="#bfe6ff" x="532" y="135">✓ 🧠 reasoning (presence)</text></g>
 </g>
 <!-- DESCARTA (barrado) -->
 <path d="M420,124 L520,168" fill="none" opacity="0.5" stroke="#f87171" stroke-dasharray="6 5" stroke-width="1.8"></path>
@@ -247,8 +247,8 @@
 <!-- saída leve -->
 <path d="M720,82 L800,96" fill="none" marker-end="url(#m21-ahc)" opacity="0.5" stroke="#38bdf8" stroke-width="1.8"></path>
 <g filter="url(#m21-glow)"><rect fill="#0e1622" height="68" rx="14" stroke="url(#m21-grad)" stroke-width="2" width="160" x="800" y="62"></rect></g>
-<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="880" y="90">transcrição leve</text>
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="880" y="110">~26% do tamanho</text>
+<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="880" y="90">lightweight transcription</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="880" y="110">~26% of the size</text>
 </svg>
 </div>
 <!-- TÓPICO 1 -->
@@ -256,22 +256,22 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">🍔 O problema: logs pesados</h2>
+<h2 class="text-2xl font-bold">🍔 The problem: heavy logs</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t1-p1">
-          Abra uma sessão JSONL real e a primeira coisa que salta aos olhos é o <strong class="text-blue-400">peso</strong>. A maior parte não é conversa:
-          é <code class="font-mono text-blue-400">tool_result</code> com a saída ecoada de volta para o contexto, <strong>dumps de arquivo inteiros</strong>,
-          saída de comando e <strong>anexos em base64</strong>. Carregar o cru no contexto para analisá-lo é desperdício puro — você paga tokens por bytes opacos.
+          Open a real JSONL session, and the first thing that jumps out is the <strong class="text-blue-400">weight</strong>. Most of it isn’t conversation:
+          it’s <code class="font-mono text-blue-400">tool_result</code> with the output echoed back into the context, <strong>full file dumps</strong>,
+          command output and <strong>base64 attachments</strong>. Loading the raw data into context to analyze it is pure waste — you pay tokens for opaque bytes.
         </p>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span> De onde vem o peso</h3>
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">⚖️</span> Where the weight comes from</h3>
 <ul class="space-y-2 text-neutral-300">
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">tool_result</code> — a saída de Read/Bash/Grep ecoada por inteiro de volta ao log.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>Dumps de arquivo — o conteúdo completo de cada arquivo aberto.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>Saída de comando — stdout/stderr de tudo que rodou.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>Anexos — imagens/arquivos em <code class="font-mono text-blue-400">base64</code> (megabytes por linha).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">tool_result</code> — the Read/Bash/Grep output echoed back to the log in full.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>File dumps—the complete contents of each opened file.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>Command output—stdout/stderr from everything that ran.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span>Attachments — images/files in <code class="font-mono text-blue-400">base64</code> (megabytes per line).</span></li>
 </ul>
 </div>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-xs overflow-x-auto">
@@ -281,14 +281,14 @@
    "content":"<span class="text-red-400">data:image/png;base64,iVBORw0KGgoAAAANSUhEUg…</span>"}]}}</pre>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Maior peso</div><p class="text-xs text-neutral-400">tool_result ecoado</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Dumps</div><p class="text-xs text-neutral-400">arquivos inteiros</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Anexos</div><p class="text-xs text-neutral-400">base64</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Custo</div><p class="text-xs text-neutral-400">contexto à toa</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Greater weight</div><p class="text-xs text-neutral-400">echoed tool_result</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Dumps</div><p class="text-xs text-neutral-400">entire files</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Attachments</div><p class="text-xs text-neutral-400">base64</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Cost</div><p class="text-xs text-neutral-400">unnecessary context</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -297,38 +297,38 @@
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">💎 O que o debloat MANTÉM</h2>
+<h2 class="text-2xl font-bold">💎 What debloat KEEPS</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t2-p1">
-          A regra do debloat é cirúrgica: <strong class="text-blue-400">guarde o que revela comportamento, jogue fora o que só pesa</strong>.
-          O que fica é exatamente o ouro — seus prompts, o texto do assistente, o modelo que escreveu cada turno, uma linha enxuta por chamada de ferramenta,
-          e a <strong class="text-blue-400">presença</strong> de raciocínio (marcada com 🧠, já que o texto vem cifrado nos logs).
+          The debloat rule is surgical: <strong class="text-blue-400">keep what reveals behavior; discard what only adds weight</strong>.
+          What remains is exactly the gold — your prompts, the assistant’s text, the model that wrote each turn, one concise line per tool call,
+          and the <strong class="text-blue-400">presence</strong> of reasoning (marked with 🧠, since the text is encrypted in the logs).
         </p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-<h4 class="font-bold text-blue-400 mb-4">✓ O que MANTÉM (o ouro)</h4>
+<h4 class="font-bold text-blue-400 mb-4">✓ What to KEEP (the gold)</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Meus prompts de usuário.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>O texto do assistente.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>O modelo (<code class="font-mono text-blue-400">message.model</code>).</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>1 linha por <code class="font-mono text-blue-400">tool_use</code> (nome + alvo curto).</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>A PRESENÇA de raciocínio (marca 🧠).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>My user prompts.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>The assistant's text.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>The model (<code class="font-mono text-blue-400">message.model</code>).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>1 line per <code class="font-mono text-blue-400">tool_use</code> (name + short target).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>THE PRESENCE of reasoning (🧠 marker).</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ O que NÃO guarda</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ What it does NOT store</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>A saída completa da ferramenta.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>O conteúdo do arquivo lido.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>O texto literal do <code class="font-mono">thinking</code> (vem cifrado).</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The tool’s complete output.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The contents of the file that was read.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>The literal text of the <code class="font-mono">thinking</code> (is encrypted).</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Por que só a PRESENÇA de raciocínio</h3>
-<p class="text-neutral-300 text-sm">O bloco <code class="font-mono text-blue-400">thinking</code> chega aos logs <strong>vazio/cifrado</strong> — só com a <code class="font-mono text-blue-400">signature</code>. Você não tem o pensamento literal, mas sabe que ele <em>existiu</em>. O debloat registra isso como uma marca 🧠: o suficiente para medir "pensou antes de agir?" sem inventar conteúdo.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Why only the PRESENCE of reasoning</h3>
+<p class="text-neutral-300 text-sm">The block <code class="font-mono text-blue-400">thinking</code> reaches the logs <strong>empty/encrypted</strong> — only with the <code class="font-mono text-blue-400">signature</code>. You don’t have the literal thought, but you know that it <em>existed</em>. Debloat records this as a 🧠 marker: enough to measure "thought before acting?" without making up content.</p>
 </div>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-xs overflow-x-auto">
 <pre class="text-neutral-300"><span class="text-blue-400">## 👤 humano</span>
@@ -342,7 +342,7 @@ Vou ler o arquivo antes de mexer.
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -351,51 +351,51 @@ Vou ler o arquivo antes de mexer.
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">🗑️ O que o debloat DESCARTA</h2>
+<h2 class="text-2xl font-bold">🗑️ What debloat DISCARDS</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t3-p1">
-          O outro lado da regra: tudo que é <strong class="text-blue-400">peso sem sinal</strong> vai embora. Os payloads de <code class="font-mono text-blue-400">tool_result</code>,
-          os blobs de anexo e a contabilidade do harness — <code class="font-mono text-blue-400">usage</code>, <code class="font-mono text-blue-400">uuids</code>,
-          <code class="font-mono text-blue-400">isMeta</code>, <code class="font-mono text-blue-400">sidechain</code>. Nada disso muda o <em>ritmo</em> medido, então pode sair sem culpa.
+          The other side of the rule: everything that is <strong class="text-blue-400">weight without a signal</strong> go away. The payloads from <code class="font-mono text-blue-400">tool_result</code>,
+          the attachment blobs and harness accounting — <code class="font-mono text-blue-400">usage</code>, <code class="font-mono text-blue-400">uuids</code>,
+          <code class="font-mono text-blue-400">isMeta</code>, <code class="font-mono text-blue-400">sidechain</code>. None of this changes the <em>pace</em> measured, so it can be dropped without guilt.
         </p>
 <div class="space-y-4 mb-6">
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"><span class="text-red-400 font-bold">✗</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-red-400 mb-1"><code class="font-mono">tool_result</code> (payload)</h4>
-<p class="text-neutral-300 text-sm">A saída ecoada da ferramenta. O <em>fato</em> de que a ferramenta rodou fica (a linha do <code class="font-mono text-blue-400">tool_use</code>); a saída em si, não.</p>
+<p class="text-neutral-300 text-sm">The tool’s echoed output. The <em>fact</em> that the tool ran stays (the line for <code class="font-mono text-blue-400">tool_use</code>); the output itself, no.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"><span class="text-red-400 font-bold">✗</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-red-400 mb-1">Blobs de anexo</h4>
-<p class="text-neutral-300 text-sm">Imagens e arquivos em base64. Megabytes que não dizem nada sobre como o modelo trabalha.</p>
+<h4 class="font-semibold text-red-400 mb-1">Attachment blobs</h4>
+<p class="text-neutral-300 text-sm">Base64 images and files. Megabytes that say nothing about how the model works.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"><span class="text-red-400 font-bold">✗</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-red-400 mb-1">Contabilidade do harness</h4>
-<p class="text-neutral-300 text-sm"><code class="font-mono text-blue-400">usage</code> (tokens), <code class="font-mono text-blue-400">uuids</code>, <code class="font-mono text-blue-400">isMeta</code>, <code class="font-mono text-blue-400">sidechain</code> — escrituração interna, não comportamento.</p>
+<h4 class="font-semibold text-red-400 mb-1">Harness accounting</h4>
+<p class="text-neutral-300 text-sm"><code class="font-mono text-blue-400">usage</code> (tokens), <code class="font-mono text-blue-400">uuids</code>, <code class="font-mono text-blue-400">isMeta</code>, <code class="font-mono text-blue-400">sidechain</code> — internal bookkeeping, not behavior.</p>
 </div>
 </div>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> O teste mental</h3>
-<p class="text-neutral-300 text-sm">Para cada campo, pergunte: "isso muda a resposta de 'o modelo pensou antes? quantas ferramentas usou? em que ordem?'". Se não muda o ritmo, é gordura. Essa pergunta é toda a lógica do <code class="font-mono text-blue-400">debloat_jsonl.py</code>.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">🔎</span> The mental test</h3>
+<p class="text-neutral-300 text-sm">For each field, ask: "does this change the answer to 'did the model think first? how many tools did it use? in what order?'". If it doesn't change the rhythm, it's dead weight. That question is the entire logic of the <code class="font-mono text-blue-400">debloat_jsonl.py</code>.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">tool_result</div><p class="text-xs text-neutral-400">payload fora</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">anexos</div><p class="text-xs text-neutral-400">blobs base64</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">tool_result</div><p class="text-xs text-neutral-400">payload outside</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">attachments</div><p class="text-xs text-neutral-400">base64 blobs</p></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">usage/uuid</div><p class="text-xs text-neutral-400">harness</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Critério</div><p class="text-xs text-neutral-400">muda o ritmo?</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Criterion</div><p class="text-xs text-neutral-400">does it change the pace?</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -404,14 +404,14 @@ Vou ler o arquivo antes de mexer.
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">🐍 O script <code class="font-mono">debloat_jsonl.py</code></h2>
+<h2 class="text-2xl font-bold">🐍 The script <code class="font-mono">debloat_jsonl.py</code></h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t4-p1">
-          A teoria vira prática num único comando. Sem argumentos, o <code class="font-mono text-blue-400">debloat_jsonl.py</code> roda no
-          <code class="font-mono text-blue-400">demo_session.jsonl</code> que mora ao lado dele, imprime o tamanho <strong class="text-blue-400">antes/depois</strong> e abre a
-          transcrição limpa — exatamente o fluxo do curso para você conferir o formato na primeira vez.
+          Theory becomes practice with a single command. With no arguments, the <code class="font-mono text-blue-400">debloat_jsonl.py</code> runs in
+          <code class="font-mono text-blue-400">demo_session.jsonl</code> that lives next to it, prints the size <strong class="text-blue-400">before/after</strong> and opens the
+          clean transcript — exactly the course flow, so you can check the format the first time.
         </p>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-sm overflow-x-auto">
 <pre class="text-neutral-300"><span class="text-neutral-500"># roda no demo_session.jsonl (ao lado do script)</span>
@@ -424,27 +424,27 @@ python debloat_jsonl.py minha_sessao.jsonl <span class="text-blue-400">-o</span>
 python debloat_jsonl.py s.jsonl <span class="text-blue-400">--no-thinking --no-open</span></pre>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎛️</span> As flags</h3>
+<h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🎛️</span> The flags</h3>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">(sem args)</code> — usa o <code class="font-mono text-blue-400">demo_session.jsonl</code> e abre o resultado.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">-o ARQUIVO</code> — escolhe onde gravar a transcrição leve.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">--no-thinking</code> — omite a marca 🧠 de raciocínio.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">--no-open</code> — não tenta abrir no editor (útil em pipeline).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">(sem args)</code> — use the <code class="font-mono text-blue-400">demo_session.jsonl</code> and opens the result.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">-o ARQUIVO</code> — choose where to save the lightweight transcript.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">--no-thinking</code> — omits the 🧠 reasoning marker.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">•</span><span><code class="font-mono text-blue-400">--no-open</code> — don't try to open it in the editor (useful in a pipeline).</span></li>
 </ul>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300 text-sm">É <strong>stdlib pura</strong> — sem dependências para instalar. Comece pelo demo para ver o formato; depois aponte para uma sessão sua em <code class="font-mono text-blue-400">~/.claude/projects/&lt;projeto&gt;/</code>. Em automação, sempre use <code class="font-mono text-blue-400">--no-open</code>.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Practical tip</h3>
+<p class="text-neutral-300 text-sm">É <strong>pure stdlib</strong> — no dependencies to install. Start with the demo to see the format; then point to one of your own sessions at <code class="font-mono text-blue-400">~/.claude/projects/&lt;projeto&gt;/</code>. In automation, always use <code class="font-mono text-blue-400">--no-open</code>.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Default</div><p class="text-xs text-neutral-400">demo_session.jsonl</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">-o</div><p class="text-xs text-neutral-400">escolhe saída</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Imprime</div><p class="text-xs text-neutral-400">antes/depois</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Deps</div><p class="text-xs text-neutral-400">stdlib pura</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">-o</div><p class="text-xs text-neutral-400">chooses output</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Prints</div><p class="text-xs text-neutral-400">before/after</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Deps</div><p class="text-xs text-neutral-400">pure stdlib</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -453,36 +453,35 @@ python debloat_jsonl.py s.jsonl <span class="text-blue-400">--no-thinking --no-o
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">📉 O resultado: ~74% de redução</h2>
+<h2 class="text-2xl font-bold">📉 The result: ~74% reduction</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t5-p1">
-          O número que o script imprime quase sempre surpreende: numa sessão típica, o debloat corta cerca de
-          <strong class="text-blue-400">74%</strong> do peso. A gordura era mesmo a maior parte do arquivo — o que resta, o ouro, cabe num
-          arquivo pequeno e legível de cabo a rabo.
+          The number the script prints is almost always surprising: in a typical session, debloating cuts about
+          <strong class="text-blue-400">74%</strong> of the weight. Filler really did make up most of the file — what's left, the gold, fits in a small file that's easy to read from beginning to end.
         </p>
 <!-- SVG: antes -> depois (barra de redução) -->
 <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Barra antes mostra 100% do tamanho; barra depois mostra cerca de 26%; a diferença de aproximadamente 74% é a gordura removida" class="w-full h-auto" role="img" viewbox="0 0 1000 180">
+<svg aria-label="The before bar shows 100% of the size; the after bar shows about 26%; the approximately 74% difference is the bloat removed" class="w-full h-auto" role="img" viewbox="0 0 1000 180">
 <defs>
 <lineargradient id="m21b-grad" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
 <pattern height="32" id="m21b-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#3b82f6" opacity="0.12" r="1.3"></circle></pattern>
 </defs>
 <rect fill="url(#m21b-grid)" height="180" width="1000" x="0" y="0"></rect>
 <!-- antes -->
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="13" x="40" y="50">antes (cru)</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="13" x="40" y="50">before (raw)</text>
 <rect fill="#0e1622" height="34" rx="9" stroke="#3b4252" stroke-width="1.6" width="800" x="40" y="60"></rect>
 <rect fill="#1e293b" height="34" opacity="0.7" rx="9" width="800" x="40" y="60"></rect>
 <text fill="#94a3b8" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="end" x="828" y="82">100%</text>
 <!-- depois -->
-<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="13" x="40" y="124">depois (debloat)</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="13" x="40" y="124">afterward (debloat)</text>
 <rect fill="#0e1622" height="34" rx="9" stroke="#3b4252" stroke-width="1.4" width="800" x="40" y="134"></rect>
 <rect fill="url(#m21b-grad)" height="34" rx="9" width="208" x="40" y="134"></rect>
 <text fill="#60a5fa" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="260" y="156">~26%</text>
 <!-- delta -->
 <text fill="#f87171" font-family="Inter,sans-serif" font-size="22" font-weight="600" text-anchor="middle" x="900" y="100">−74%</text>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="900" y="120">gordura</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="900" y="120">bloat</text>
 </svg>
 </div>
 <div class="bg-dark-900 rounded-xl border border-dark-600 p-6 mb-6 font-mono text-sm overflow-x-auto">
@@ -492,18 +491,18 @@ depois: <span class="text-blue-400">0.48 MB</span>   <span class="text-neutral-5
 escrito em: demo_session.clean.md</pre>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> O que esperar</h3>
-<p class="text-neutral-300 text-sm">O exato % varia com quanta saída de ferramenta a sessão tinha — sessões cheias de leitura de arquivo encolhem ainda mais. Mas a faixa dos <strong class="text-blue-400">~74%</strong> é típica: o sinal vive numa fração pequena do arquivo.</p>
+<h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> What to expect</h3>
+<p class="text-neutral-300 text-sm">The exact % varies with how much tool output the session had—sessions full of file reads shrink even more. But the range of <strong class="text-blue-400">~74%</strong> is typical: the signal lives in a small fraction of the file.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Antes</div><p class="text-xs text-neutral-400">100% (cru)</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Depois</div><p class="text-xs text-neutral-400">~26%</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Cortado</div><p class="text-xs text-neutral-400">~74%</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Restante</div><p class="text-xs text-neutral-400">o ouro</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Before</div><p class="text-xs text-neutral-400">100% (raw)</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">After</div><p class="text-xs text-neutral-400">~26%</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Capped</div><p class="text-xs text-neutral-400">~74%</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Remaining</div><p class="text-xs text-neutral-400">the gold</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
@@ -512,87 +511,87 @@ escrito em: demo_session.clean.md</pre>
 <div class="flex items-center justify-between mb-6 gap-3 flex-wrap">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">🧩 A pegadinha do schema</h2>
+<h2 class="text-2xl font-bold">🧩 The schema gotcha</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button"><span aria-hidden="true">?</span><span>Tenho dúvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button"><span aria-hidden="true">?</span><span>I have a question</span></button>
 </div>
 <p class="text-neutral-300 mb-6 leading-relaxed inema-prose" data-inema-block="m2-1-t6-p1">
-          Ao abrir a transcrição leve pela primeira vez, um detalhe estranha: o <strong>assistente aparece em vários cabeçalhos seguidos</strong>.
-          Não é bug. Cada bloco do assistente é uma <strong class="text-blue-400">LINHA separada</strong> no JSONL, e o debloat <strong>preserva a ordem</strong> —
-          então um único turno de resposta vira várias entradas. É exatamente por isso que a análise (no próximo módulo) agrupa tudo em <strong class="text-blue-400">turno lógico</strong>.
+          When you open the lightweight transcript for the first time, one detail seems odd: the <strong>assistant appears in several consecutive headers</strong>.
+          It’s not a bug. Each assistant block is a <strong class="text-blue-400">Separate LINE</strong> in the JSONL, and the debloat <strong>preserves the order</strong> —
+          so a single response turn becomes several entries. That’s exactly why the analysis (in the next module) groups everything into <strong class="text-blue-400">logical turn</strong>.
         </p>
 <!-- Timeline: linhas físicas em ordem -->
 <div class="space-y-3 mb-6">
 <div class="flex items-center space-x-4">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 border border-dark-600 flex items-center justify-center text-neutral-400 text-sm font-bold">1</div>
-<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">linha</span> <code class="font-mono text-blue-400">## 👤 humano</code> <span class="text-neutral-500 text-sm">— o prompt</span></div>
+<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">line</span> <code class="font-mono text-blue-400">## 👤 humano</code> <span class="text-neutral-500 text-sm">— the prompt</span></div>
 </div>
 <div class="flex items-center space-x-4">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-sm font-bold">2</div>
-<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">linha</span> <code class="font-mono text-blue-400">## 🤖 claude-fable-5 🧠</code> <span class="text-neutral-500 text-sm">— thinking</span></div>
+<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">line</span> <code class="font-mono text-blue-400">## 🤖 claude-fable-5 🧠</code> <span class="text-neutral-500 text-sm">— thinking</span></div>
 </div>
 <div class="flex items-center space-x-4">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-sm font-bold">3</div>
-<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">linha</span> <code class="font-mono text-blue-400">## 🤖 claude-fable-5</code> <span class="text-neutral-500 text-sm">— text</span></div>
+<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">line</span> <code class="font-mono text-blue-400">## 🤖 claude-fable-5</code> <span class="text-neutral-500 text-sm">— text</span></div>
 </div>
 <div class="flex items-center space-x-4">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-sm font-bold">4</div>
-<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">linha</span> <code class="font-mono text-blue-400">→ Read / → Edit / → Bash</code> <span class="text-neutral-500 text-sm">— tool_use</span></div>
+<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">line</span> <code class="font-mono text-blue-400">→ Read / → Edit / → Bash</code> <span class="text-neutral-500 text-sm">— tool_use</span></div>
 </div>
 <div class="flex items-center space-x-4">
 <div class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-700 border border-dark-600 flex items-center justify-center text-neutral-400 text-sm font-bold">5</div>
-<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">linha</span> <code class="font-mono text-blue-400">## 👤 humano</code> <span class="text-neutral-500 text-sm">— próximo prompt → fecha o turno</span></div>
+<div class="flex-1 bg-dark-800 rounded-lg p-3 border border-dark-600"><span class="text-neutral-400 text-sm">line</span> <code class="font-mono text-blue-400">## 👤 humano</code> <span class="text-neutral-500 text-sm">— next prompt → closes the turn</span></div>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
-<h4 class="font-bold text-blue-400 mb-4">✓ Por que está certo</h4>
+<h4 class="font-bold text-blue-400 mb-4">✓ Why it's right</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Preserva a ordem real dos eventos.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Não inventa fronteiras de turno cedo demais.</span></li>
-<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Deixa o agrupamento para a análise (turno lógico).</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Preserves the actual order of events.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>It doesn't invent turn boundaries too early.</span></li>
+<li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Leave grouping to the analysis (logical turn).</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">✗ O erro comum</h4>
+<h4 class="font-bold text-red-400 mb-4">✗ The common mistake</h4>
 <ul class="space-y-3 text-neutral-300 text-sm">
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Achar que "5 cabeçalhos = 5 respostas".</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Contar por cabeçalho infla os números.</span></li>
-<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Medir sem agrupar por prompt humano.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Thinking “5 headers = 5 responses.”</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Counting by header inflates the numbers.</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Measure without grouping by human prompt.</span></li>
 </ul>
 </div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">1 bloco</div><p class="text-xs text-neutral-400">= 1 linha</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Ordem</div><p class="text-xs text-neutral-400">preservada</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Vários ## 🤖</div><p class="text-xs text-neutral-400">= 1 turno</p></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Agrupa</div><p class="text-xs text-neutral-400">turno lógico</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">1 block</div><p class="text-xs text-neutral-400">= 1 line</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Order</div><p class="text-xs text-neutral-400">preserved</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Multiple ## 🤖</div><p class="text-xs text-neutral-400">= 1 turn</p></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-4"><div class="text-blue-400 font-semibold text-sm mb-1">Group</div><p class="text-xs text-neutral-400">logical turn</p></div>
 </div>
 <div class="flex justify-start mt-6">
 <button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Marcar como lido</span>
+<span aria-hidden="true" class="inema-read-icon">○</span><span class="inema-read-label">Mark as read</span>
 </button>
 </div>
 </section>
 <!-- RESUMO -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🧪</span> Resumo do Módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🧪</span> Module Summary</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Logs crus são pesados</strong><span class="text-neutral-400"> — tool_result ecoado, dumps, saída de comando e base64 dominam o arquivo.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">O debloat MANTÉM o ouro</strong><span class="text-neutral-400"> — prompts, texto, model, 1 linha por tool_use e a marca 🧠 de raciocínio.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">E DESCARTA o peso</strong><span class="text-neutral-400"> — payloads de tool_result, blobs e a contabilidade do harness.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-blue-400">debloat_jsonl.py</code> roda no demo por padrão</strong><span class="text-neutral-400"> — flags -o, --no-thinking, --no-open; stdlib pura.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">~74% de redução</strong><span class="text-neutral-400"> — a gordura era a maior parte; o sinal cabe num arquivo pequeno.</span></div></div>
-<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">1 bloco = 1 linha</strong><span class="text-neutral-400"> — vários cabeçalhos do assistente são normais; por isso se agrupa em turno lógico.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Raw logs are bulky</strong><span class="text-neutral-400"> — echoed tool_result, dumps, command output, and base64 dominate the file.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Debloating KEEPS the gold</strong><span class="text-neutral-400"> — prompts, text, model, 1 line per tool_use, and the 🧠 reasoning marker.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">AND DISCARD the weight</strong><span class="text-neutral-400"> — tool_result payloads, blobs, and harness accounting.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white"><code class="font-mono text-blue-400">debloat_jsonl.py</code> runs in the demo by default</strong><span class="text-neutral-400"> — flags -o, --no-thinking, --no-open; pure stdlib.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">~74% reduction</strong><span class="text-neutral-400"> — the bulk was most of it; the signal fits in a small file.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">1 block = 1 line</strong><span class="text-neutral-400"> — multiple assistant headers are normal; that's why they're grouped into a logical turn.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-blue-400 mb-2">Próximo Módulo:</h3>
-<p class="text-neutral-300">2.2 — Corpus, Números e o Delta Fable vs Opus</p>
+<h3 class="font-semibold text-blue-400 mb-2">Next Module:</h3>
+<p class="text-neutral-300">2.2 — Corpus, Numbers, and the Fable vs. Opus Delta</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Voltar para Trilha</a>
-<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-2.html">Próximo Módulo →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Back to Track</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-2.html">Next Module →</a>
 </div>
 </div>
 </section>
@@ -634,7 +633,7 @@ escrito em: demo_session.clean.md</pre>
       document.addEventListener('inema:progress', sync);
     })();
   </script>
-<script src="../../assets/learn.js"></script>
+<script src="../../../assets/learn.js"></script>
 <script>if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }</script>
 </body>
 </html>
